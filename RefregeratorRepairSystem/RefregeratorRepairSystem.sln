@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefregeratorRepairSystem.App", "RefregeratorRepairSystem.App\RefregeratorRepairSystem.App.csproj", "{2B4011C9-E76A-42FA-910E-DAC2BA846FFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefregeratorRepairSystem.Tests", "RefregeratorRepairSystem.Tests\RefregeratorRepairSystem.Tests.csproj", "{51DCA123-24B2-4D62-B089-0D099AA41783}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefregeratorRepairSystem.Models", "RefregeratorRepairSystem.Models\RefregeratorRepairSystem.Models.csproj", "{BC8F7ABF-0FF0-4BFD-984A-32F3B869BC22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefregeratorRepairSystem.Data", "RefregeratorRepairSystem.Data\RefregeratorRepairSystem.Data.csproj", "{E9736F42-99EC-4A6F-B1FA-2508FFEE2A9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefregeratorRepairSystem.Services", "RefregeratorRepairSystem.Services\RefregeratorRepairSystem.Services.csproj", "{9F825652-BDB0-405D-B650-1C8046052D8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B4011C9-E76A-42FA-910E-DAC2BA846FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B4011C9-E76A-42FA-910E-DAC2BA846FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B4011C9-E76A-42FA-910E-DAC2BA846FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B4011C9-E76A-42FA-910E-DAC2BA846FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51DCA123-24B2-4D62-B089-0D099AA41783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51DCA123-24B2-4D62-B089-0D099AA41783}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51DCA123-24B2-4D62-B089-0D099AA41783}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51DCA123-24B2-4D62-B089-0D099AA41783}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC8F7ABF-0FF0-4BFD-984A-32F3B869BC22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC8F7ABF-0FF0-4BFD-984A-32F3B869BC22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC8F7ABF-0FF0-4BFD-984A-32F3B869BC22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC8F7ABF-0FF0-4BFD-984A-32F3B869BC22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9736F42-99EC-4A6F-B1FA-2508FFEE2A9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9736F42-99EC-4A6F-B1FA-2508FFEE2A9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9736F42-99EC-4A6F-B1FA-2508FFEE2A9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9736F42-99EC-4A6F-B1FA-2508FFEE2A9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F825652-BDB0-405D-B650-1C8046052D8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F825652-BDB0-405D-B650-1C8046052D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F825652-BDB0-405D-B650-1C8046052D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F825652-BDB0-405D-B650-1C8046052D8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
