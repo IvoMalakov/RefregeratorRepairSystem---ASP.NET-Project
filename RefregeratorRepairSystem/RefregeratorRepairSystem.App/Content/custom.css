@@ -1,0 +1,30 @@
+.body-content {
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: aqua;
+}
+
+h2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+label {
+    margin-right: 8px;
+}
+
+.button {
+    margin: 10px auto 10px 300px;
+}
+
+.button1 {
+    margin: 30px 10px 10px -7px;
+}
+
+.rememberMe {
+    margin: 10px auto 10px 170px;
+}
