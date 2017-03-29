@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Air Conditioners and Refrigerators repairing system</title>
+    <title>@ViewBag.Title - ЕТ "Христо Малаков"</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link type="text/css" rel="stylesheet" href="~/Content/custom.css" />
@@ -18,13 +18,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Repairing system", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("ЕТ \"Христо Малаков\"", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Начална страница", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Отностно", "About", "Home")</li>
+                    <li>@Html.ActionLink("Контакти", "Contact", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -34,7 +34,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Air Conditioners and Refrigerators repairing system</p>
+            <p>&reg; @DateTime.Now.Year - ЕТ "Христо Малаков"</p>
         </footer>
     </div>
 

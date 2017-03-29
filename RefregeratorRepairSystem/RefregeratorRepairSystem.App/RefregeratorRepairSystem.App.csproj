@@ -168,6 +168,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Airconditioners\AirconditionersAreaRegistration.cs" />
+    <Compile Include="Areas\Refregerators\RefregeratorsAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -194,6 +196,8 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Areas\Airconditioners\Views\web.config" />
+    <Content Include="Areas\Refregerators\Views\web.config" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -251,6 +255,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Airconditioners\Controllers\" />
+    <Folder Include="Areas\Airconditioners\Models\" />
+    <Folder Include="Areas\Airconditioners\Views\Shared\" />
+    <Folder Include="Areas\Refregerators\Controllers\" />
+    <Folder Include="Areas\Refregerators\Models\" />
+    <Folder Include="Areas\Refregerators\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
