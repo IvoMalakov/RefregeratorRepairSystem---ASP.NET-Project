@@ -30,3 +30,5 @@ D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Services\bin
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Services\obj\Debug\RefregeratorRepairSystem.Services.csprojResolveAssemblyReference.cache
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Services\obj\Debug\RefregeratorRepairSystem.Services.dll
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Services\obj\Debug\RefregeratorRepairSystem.Services.pdb
+D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Services\bin\Debug\AutoMapper.dll
+D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Services\bin\Debug\AutoMapper.xml

@@ -1,3 +1,6 @@
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+
 namespace RefregeratorRepairSystem.Data.Migrations
 {
     using System;
@@ -13,9 +16,43 @@ namespace RefregeratorRepairSystem.Data.Migrations
             AutomaticMigrationDataLossAllowed = true;
         }
 
-        //protected override void Seed(RefregeratorRepairSystem.Data.RefregeratorRepairSystemContext context)
-        //{
+        protected override void Seed(RefregeratorRepairSystem.Data.RefregeratorRepairSystemContext context)
+        {
+            if (!context.Roles.Any(role => role.Name == "Customer"))
+            {
+                var roleManager = new RoleManager<IdentityRole>(
+                    new RoleStore<IdentityRole>(new RefregeratorRepairSystemContext()));
+                var roleCreateResult = roleManager.Create(new IdentityRole("Customer"));
 
-        //}
+                if (!roleCreateResult.Succeeded)
+                {
+                    throw new Exception(string.Join("; ", roleCreateResult.Errors));
+                }
+            }
+
+            if (!context.Roles.Any(role => role.Name == "Administrator"))
+            {
+                var roleManager = new RoleManager<IdentityRole>(
+                    new RoleStore<IdentityRole>(new RefregeratorRepairSystemContext()));
+                var roleCreateResult = roleManager.Create(new IdentityRole("Administrator"));
+
+                if (!roleCreateResult.Succeeded)
+                {
+                    throw new Exception(string.Join("; ", roleCreateResult.Errors));
+                }
+            }
+
+            if (!context.Roles.Any(role => role.Name == "Employee"))
+            {
+                var roleManager = new RoleManager<IdentityRole>(
+                    new RoleStore<IdentityRole>(new RefregeratorRepairSystemContext()));
+                var roleCreateResult = roleManager.Create(new IdentityRole("Employee"));
+
+                if (!roleCreateResult.Succeeded)
+                {
+                    throw new Exception(string.Join("; ", roleCreateResult.Errors));
+                }
+            }
+        }
     }
 }

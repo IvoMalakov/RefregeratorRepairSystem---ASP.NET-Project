@@ -109,3 +109,5 @@ D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.App\bin\Micr
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.App\obj\Debug\RefregeratorRepairSystem.App.csprojResolveAssemblyReference.cache
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.App\obj\Debug\RefregeratorRepairSystem.App.dll
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.App\obj\Debug\RefregeratorRepairSystem.App.pdb
+D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.App\bin\AutoMapper.dll
+D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.App\bin\AutoMapper.xml

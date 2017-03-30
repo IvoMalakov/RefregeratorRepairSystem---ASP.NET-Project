@@ -14,6 +14,8 @@ namespace RefregeratorRepairSystem.Data
 
         public DbSet<Customer> Customers { get; set; }
 
+        public DbSet<Employee> Employees { get; set; }
+
         public static RefregeratorRepairSystemContext Create()
         {
             return new RefregeratorRepairSystemContext();
