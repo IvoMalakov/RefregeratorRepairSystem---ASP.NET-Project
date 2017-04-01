@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using RefregeratorRepairSystem.Data;
 using RefregeratorRepairSystem.Models.EntityModels;
 using RefregeratorRepairSystem.Models.ViewModels.Account;
 using RefregeratorRepairSystem.Services;
@@ -23,10 +24,9 @@ namespace RefregeratorRepairSystem.App.Controllers
 
         public AccountController()
         {
-           this.service = new AccountService();
+            this.service = new AccountService();
         }
-
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager ) : this()
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager) : this()
         {
             UserManager = userManager;
             SignInManager = signInManager;
@@ -159,8 +159,8 @@ namespace RefregeratorRepairSystem.App.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    this.service.CreateCustomer(user, model);
                     this.UserManager.AddToRole(user.Id, "Customer");
+                    this.service.CreateCustomer(user, model);
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
@@ -168,7 +168,6 @@ namespace RefregeratorRepairSystem.App.Controllers
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
-
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);

@@ -260,10 +260,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Airconditioners\Controllers\" />
-    <Folder Include="Areas\Airconditioners\Models\" />
     <Folder Include="Areas\Airconditioners\Views\Shared\" />
     <Folder Include="Areas\Refregerators\Controllers\" />
-    <Folder Include="Areas\Refregerators\Models\" />
     <Folder Include="Areas\Refregerators\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
