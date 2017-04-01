@@ -27,4 +27,3 @@ D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Models\bin\D
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Models\bin\Debug\System.Web.WebPages.Razor.xml
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Models\obj\Debug\RefregeratorRepairSystem.Models.dll
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Models\obj\Debug\RefregeratorRepairSystem.Models.pdb
-D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Models\obj\Debug\RefregeratorRepairSystem.Models.csprojResolveAssemblyReference.cache
