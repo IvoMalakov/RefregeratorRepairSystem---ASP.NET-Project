@@ -12,10 +12,22 @@
             <tr>
                 <th>Климатици</th>
                 <th>Хладилници</th>
+                @{
+                    if (Request.IsAuthenticated && User.IsInRole("Administrator"))
+                    {
+                        @Html.Partial("Administrator_Partial_1")
+                    }
+                }
             </tr>
             <tr>
                 <td><a class="btn btn-primary button1" href="~/airconditioners/index">Отиди на секцията за климатици</a></td>
                 <td><a class="btn btn-warning button1" href="~/refrigerators/index">Отиди на секцията за хладилници</a></td>
+                @{
+                    if (Request.IsAuthenticated && User.IsInRole("Administrator"))
+                    {
+                        @Html.Partial("Administrator_Partial_2")
+                    }
+                }
             </tr>
         </table>
     </div>

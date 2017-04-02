@@ -172,6 +172,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Administrator\AdministratorAreaRegistration.cs" />
+    <Compile Include="Areas\Administrator\Controllers\AdministratorController.cs" />
     <Compile Include="Areas\Airconditioners\AirconditionersAreaRegistration.cs" />
     <Compile Include="Areas\Refregerators\RefregeratorsAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -202,6 +204,14 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Areas\Airconditioners\Views\web.config" />
     <Content Include="Areas\Refregerators\Views\web.config" />
+    <Content Include="Areas\Administrator\Views\web.config" />
+    <Content Include="Areas\Administrator\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Administrator\Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Administrator\Index.cshtml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -214,6 +224,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
@@ -256,9 +267,13 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Administrator\CreateEmployee.cshtml" />
+    <Content Include="Views\Home\Administrator_Partial_2.cshtml" />
+    <Content Include="Views\Home\Administrator_Partial_1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Administrator\Views\Administrator\" />
     <Folder Include="Areas\Airconditioners\Controllers\" />
     <Folder Include="Areas\Airconditioners\Views\Shared\" />
     <Folder Include="Areas\Refregerators\Controllers\" />

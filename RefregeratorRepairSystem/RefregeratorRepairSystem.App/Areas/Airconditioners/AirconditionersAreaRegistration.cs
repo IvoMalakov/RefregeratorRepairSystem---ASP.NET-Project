@@ -14,11 +14,7 @@ namespace RefregeratorRepairSystem.App.Areas.Airconditioners
 
         public override void RegisterArea(AreaRegistrationContext context)
         {
-            context.MapRoute(
-                "Airconditioners_default",
-                "Airconditioners/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
-            );
+            context.Routes.MapMvcAttributeRoutes();
         }
     }
 }

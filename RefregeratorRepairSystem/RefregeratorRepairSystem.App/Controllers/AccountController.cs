@@ -156,11 +156,21 @@ namespace RefregeratorRepairSystem.App.Controllers
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email, PhoneNumber = model.PhoneNumber};
+                int usersCount = this.service.CheckUsersCount();
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    this.UserManager.AddToRole(user.Id, "Customer");
-                    this.service.CreateCustomer(user, model);
+                    if (usersCount == 0)
+                    {
+                        this.UserManager.AddToRole(user.Id, "Administrator");
+                    }
+
+                    else
+                    {
+                        this.UserManager.AddToRole(user.Id, "Customer");
+                        this.service.CreateCustomer(user, model);
+                    }
+
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771

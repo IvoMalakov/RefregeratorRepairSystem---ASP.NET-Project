@@ -1,0 +1,48 @@
+﻿@using RefregeratorRepairSystem.Models.ViewModels.Customers;
+@model CustomerToEmployeeViewModel
+
+@{
+    ViewBag.Title = "CreateEmployee";
+}
+
+<h1>Create an employee</h1>
+@using (Html.BeginForm())
+{
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(m => m.FirstName)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(m => m.LastName)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(m => m.Salary)
+            </th>
+
+            <th>
+                Are you sure you want to make that customer an employee?
+            </th>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.EditorFor(model => model.FirstName, new {htmlAttribute = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+            </td>
+
+            <td>
+                @Html.EditorFor(model => model.LastName, new { htmlAttribute = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+            </td>
+
+            <td>
+                @Html.EditorFor(m => m.Salary, new { htmlAttribute = new { @class = "form-control"}})
+            </td>
+            <td>
+                <a class="btn btn-danger button2" href="~/administrator/index">Cancel</a>
+                <input type="submit" class="btn btn-success button2" value="Create an Employee" />
+            </td>
+        </tr>
+    </table>
+}

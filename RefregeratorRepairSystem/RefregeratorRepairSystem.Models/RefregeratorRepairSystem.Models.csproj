@@ -93,6 +93,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BindingModels\CreateEmployeeBindingModel.cs" />
     <Compile Include="EntityModels\AirConditioner.cs" />
     <Compile Include="EntityModels\ApplicationUser.cs" />
     <Compile Include="EntityModels\Customer.cs" />
@@ -111,6 +112,8 @@
     <Compile Include="ViewModels\Account\ResetPasswordViewModel.cs" />
     <Compile Include="ViewModels\Account\SendCodeViewModel.cs" />
     <Compile Include="ViewModels\Account\VerifyCodeViewModel.cs" />
+    <Compile Include="ViewModels\Customers\CustomerToEmployeeViewModel.cs" />
+    <Compile Include="ViewModels\Customers\ListCustomerViewModel.cs" />
     <Compile Include="ViewModels\Menage\AddPhoneNumberViewModel.cs" />
     <Compile Include="ViewModels\Menage\ChangePasswordViewModel.cs" />
     <Compile Include="ViewModels\Menage\ConfigureTwoFactorViewModel.cs" />
