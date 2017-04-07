@@ -4,18 +4,21 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RefregeratorRepairSystem.Models.Enums;
 
 namespace RefregeratorRepairSystem.Models.EntityModels
 {
-    public class AirConditioner
+    public class Item
     {
-        public AirConditioner()
+        public Item()
         {
             this.Parts = new HashSet<Part>();
         }
 
         [Key]
         public int Id { get; set; }
+
+        public ItemType Type { get; set; }
 
         public string Make { get; set; }
 

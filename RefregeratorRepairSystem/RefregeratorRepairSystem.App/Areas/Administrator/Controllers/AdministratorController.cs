@@ -45,14 +45,14 @@ namespace RefregeratorRepairSystem.App.Areas.Administrator.Controllers
         public ActionResult Index()
         {
             IEnumerable<ListCustomerViewModel> customerViewModels = this.service.GetAllCustomers();
-            return View(customerViewModels);
+            return View("~/Areas/Administrator/Views/Index.cshtml", customerViewModels);
         }
 
         [Route("createEmployee/{id:int}")]
         public ActionResult CreateEmployee(int id)
         {
             CustomerToEmployeeViewModel viewModel = this.service.TakeACustomertoMakeEmployee(id);
-            return this.View(viewModel);
+            return this.View("~/Areas/Administrator/Views/CreateEmployee.cshtml", viewModel);
         }
 
         [HttpPost]

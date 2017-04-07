@@ -94,12 +94,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BindingModels\CreateEmployeeBindingModel.cs" />
-    <Compile Include="EntityModels\AirConditioner.cs" />
     <Compile Include="EntityModels\ApplicationUser.cs" />
     <Compile Include="EntityModels\Customer.cs" />
     <Compile Include="EntityModels\Employee.cs" />
     <Compile Include="EntityModels\Part.cs" />
-    <Compile Include="EntityModels\Refregerator.cs" />
+    <Compile Include="EntityModels\Item.cs" />
     <Compile Include="EntityModels\Repair.cs" />
     <Compile Include="Enums\ItemType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -16,8 +16,7 @@
 
         public string Model { get; set; }
 
-        [Required]
-        public ItemType PatrType { get; set; }
+        public virtual Item Item { get; set; }
 
         public int? Quantity { get; set; }
     }

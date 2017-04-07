@@ -174,8 +174,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Administrator\AdministratorAreaRegistration.cs" />
     <Compile Include="Areas\Administrator\Controllers\AdministratorController.cs" />
-    <Compile Include="Areas\Airconditioners\AirconditionersAreaRegistration.cs" />
-    <Compile Include="Areas\Refregerators\RefregeratorsAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -202,12 +200,10 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Areas\Airconditioners\Views\web.config" />
-    <Content Include="Areas\Refregerators\Views\web.config" />
     <Content Include="Areas\Administrator\Views\web.config" />
     <Content Include="Areas\Administrator\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Administrator\Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Administrator\Index.cshtml" />
+    <Content Include="Areas\Administrator\Views\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -267,17 +263,13 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Administrator\CreateEmployee.cshtml" />
+    <Content Include="Areas\Administrator\Views\CreateEmployee.cshtml" />
     <Content Include="Views\Home\Administrator_Partial_2.cshtml" />
     <Content Include="Views\Home\Administrator_Partial_1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Administrator\Views\Administrator\" />
-    <Folder Include="Areas\Airconditioners\Controllers\" />
-    <Folder Include="Areas\Airconditioners\Views\Shared\" />
-    <Folder Include="Areas\Refregerators\Controllers\" />
-    <Folder Include="Areas\Refregerators\Views\Shared\" />
+    <Folder Include="Views\Administrator\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

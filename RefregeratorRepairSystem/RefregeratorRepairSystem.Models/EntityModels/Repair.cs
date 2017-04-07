@@ -11,8 +11,7 @@ namespace RefregeratorRepairSystem.Models.EntityModels
     {
         public Repair()
         {
-            this.AirConditioners = new HashSet<AirConditioner>();
-            this.Refregerators = new HashSet<Refregerator>();
+            this.Items = new HashSet<Item>();
         }
 
         [Key]
@@ -24,9 +23,7 @@ namespace RefregeratorRepairSystem.Models.EntityModels
 
         public double Discount { get; set; }
 
-        public virtual ICollection<AirConditioner> AirConditioners { get; set; }
-
-        public virtual ICollection<Refregerator> Refregerators { get; set; }
+        public virtual ICollection<Item> Items { get; set; }
 
     }
 }

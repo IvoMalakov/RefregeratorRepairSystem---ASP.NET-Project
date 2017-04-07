@@ -16,9 +16,7 @@ namespace RefregeratorRepairSystem.Data
 
         public DbSet<Employee> Employees { get; set; }
 
-        public DbSet<AirConditioner> AirConditioners { get; set; }
-
-        public DbSet<Refregerator> Refregerators { get; set; }
+        public DbSet<Item> Items { get; set; }
 
         public DbSet<Repair> Repairs { get; set; }
 
