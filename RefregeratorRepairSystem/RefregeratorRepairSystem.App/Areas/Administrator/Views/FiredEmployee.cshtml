@@ -10,7 +10,7 @@
 @using (Html.BeginForm())
 {
     <div>
-    <table class="table table-striped">
+    <table class="table table-striped special-table">
         <tr>
             <th>
                 @Html.DisplayNameFor(m => m.FirstName)
@@ -22,6 +22,10 @@
 
             <th>
                 @Html.DisplayNameFor(m => m.Salary)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(m => m.Address)
             </th>
 
             <th>
@@ -39,11 +43,15 @@
             </td>
 
             <td>
-                @Html.EditorFor(model => model.LastName, new { htmlAttribute = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+                @Html.EditorFor(model => model.LastName, new {htmlAttribute = new {@class = "form-control", disable = "disable", @readonly = "readonly"}})
             </td>
 
             <td>
                 @Html.EditorFor(model => model.Salary, new {htmlAttribute = new {@class = "form-control", disable = "disable", @readonly = "readonly"}})
+            </td>
+
+            <td>
+                @Html.EditorFor(model => model.Address, new { htmlAttribute = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
             </td>
 
             <td>

@@ -10,6 +10,8 @@
 
         public string LastName { get; set; }
 
+        public string Address { get; set; }
+
         public decimal Salary { get; set; }
 
         public ApplicationUser ApplicationUser { get; set; }

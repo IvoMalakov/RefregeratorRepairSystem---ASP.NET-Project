@@ -80,14 +80,14 @@ namespace RefregeratorRepairSystem.App.Areas.Administrator.Controllers
         [HttpPost]
         [Route("createEmployee/{id:int}")]
         public ActionResult CreateEmployee(
-            [Bind(Include = "Id, FirstName, LastName, Salary, ApplicationUser")] CreateEmployeeBindingModel model)
+            [Bind(Include = "Id, FirstName, LastName, Salary, Address, ApplicationUser")] CreateEmployeeBindingModel model)
         {
             if (this.ModelState.IsValid)
             {
                 this.service.TransformCustomerToEmployee(model);
-                ApplicationUser user = UserManager.FindByName(this.User.Identity.Name);
-                UserManager.AddToRole(user.Id, "Employee");
-                UserManager.RemoveFromRole(user.Id, "Customer");
+                //ApplicationUser user = UserManager.FindByName(this.User.Identity.Name);
+                //UserManager.AddToRole(user.Id, "Employee");
+                //UserManager.RemoveFromRole(user.Id, "Customer");
                 return this.RedirectToAction("Index");
             }
 
@@ -97,14 +97,14 @@ namespace RefregeratorRepairSystem.App.Areas.Administrator.Controllers
         [HttpPost]
         [Route("firedEmployee/{id:int}")]
         public ActionResult FiredEmployee(
-            [Bind(Include = "Id, FirstName, LastName, Salary, ApplicationUser")] FiredEmployeeBindingModel model)
+            [Bind(Include = "Id, FirstName, LastName, Address, Salary, ApplicationUser")] FiredEmployeeBindingModel model)
         {
             if (this.ModelState.IsValid)
             {
                 this.service.FiredAnEmployee(model);
-                ApplicationUser user = UserManager.FindByName(this.User.Identity.Name);
-                UserManager.RemoveFromRole(user.Id, "Employee");
-                this.service.DeleteUser(user.Id);
+                //ApplicationUser user = UserManager.FindByName(this.User.Identity.Name);
+                //UserManager.RemoveFromRole(user.Id, "Employee");
+                //this.service.DeleteUser(user.Id);
                 return this.RedirectToAction("AllEmployees");
             }
 

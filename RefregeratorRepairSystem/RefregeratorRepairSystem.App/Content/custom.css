@@ -32,3 +32,9 @@ label {
 .rememberMe {
     margin: 10px auto 10px 170px;
 }
+
+.special-table input[type="text"],
+.special-table input[type="number"] {
+    width: 150px;
+    margin-top: 10px;
+}

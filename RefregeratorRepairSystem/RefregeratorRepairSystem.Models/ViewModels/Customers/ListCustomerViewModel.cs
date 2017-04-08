@@ -14,6 +14,6 @@ namespace RefregeratorRepairSystem.Models.ViewModels.Customers
 
         public string LastName { get; set; }
 
-        public string EGN { get; set; }
+        public string Address { get; set; }
     }
 }

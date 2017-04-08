@@ -8,9 +8,8 @@
         public int Id { get; set; }
 
         [Required]
-        [MinLength(10)]
-        [MaxLength(10)]
-        public string EGN { get; set; }
+        [MinLength(5)]
+        public string Address { get; set; }
 
         [Required]
         [MinLength(3)]

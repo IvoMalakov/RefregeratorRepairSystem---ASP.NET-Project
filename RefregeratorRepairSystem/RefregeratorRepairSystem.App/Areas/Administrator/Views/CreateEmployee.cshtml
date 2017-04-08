@@ -8,7 +8,7 @@
 <h1>Create an employee</h1>
 @using (Html.BeginForm())
 {
-    <div><table class="table table-striped">
+    <div><table class="table table-striped special-table">
         <tr>
             <th>
                 @Html.DisplayNameFor(m => m.FirstName)
@@ -16,6 +16,14 @@
 
             <th>
                 @Html.DisplayNameFor(m => m.LastName)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(m => m.Address)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(m => m.ApplicationUser.PhoneNumber)
             </th>
 
             <th>
@@ -30,23 +38,32 @@
 
         <tr>
             <td>
-                @Html.EditorFor(model => model.FirstName, new {htmlAttribute = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+                @Html.EditorFor(model => model.FirstName, new {htmlAttribute = new {@class = "form-control", disable = "disable", @readonly = "readonly"}})
             </td>
 
             <td>
-                @Html.EditorFor(model => model.LastName, new { htmlAttribute = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+                @Html.EditorFor(model => model.LastName, new {htmlAttribute = new {@class = "form-control", disable = "disable", @readonly = "readonly"}})
+            </td>
+
+            <td>
+                @Html.EditorFor(model => model.Address, new {htmlAttribute = new {@class = "form-control", disable = "disable", @readonly = "readonly"}})
+            </td>
+
+            <td>
+                @Html.EditorFor(model => model.ApplicationUser.PhoneNumber, new {htmlAttribute = new {@class = "form-control", disable = "disable", @readonly = "readonly"}})
             </td>
 
             <td>
                 @Html.EditorFor(m => m.Salary, new {htmlAttribute = new {@class = "form-control"}})
             </td>
             <td>
-                <input type="hidden" name="ApplicationUser" value="@Model.ApplicationUser"  disabled="disabled"/>
-            </td>
-            <td>
-                <a class="btn btn-danger button2" href="~/administrator/home">Cancel</a>
-                <input type="submit" class="btn btn-success button2" value="Create an Employee" />
-            </td>
-        </tr>
-    </table></div>
+                <input type="hidden" name="ApplicationUser" value="@Model.ApplicationUser" disabled="disabled"/>
+                </td>
+                <td>
+                    <a class="btn btn-danger button2" href="~/administrator/home">Cancel</a>
+                    <input type="submit" class="btn btn-success button2" value="Create an Employee"/>
+                </td>
+            </tr>
+        </table>
+    </div>
 }

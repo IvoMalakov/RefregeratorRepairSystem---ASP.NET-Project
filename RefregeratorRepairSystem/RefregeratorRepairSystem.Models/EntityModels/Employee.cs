@@ -12,6 +12,8 @@ namespace RefregeratorRepairSystem.Models.EntityModels
 
         public string LastName { get; set; }
 
+        public string Address { get; set; }
+
         public virtual ApplicationUser ApplicationUser { get; set; }
 
         public decimal Salary { get; set; }

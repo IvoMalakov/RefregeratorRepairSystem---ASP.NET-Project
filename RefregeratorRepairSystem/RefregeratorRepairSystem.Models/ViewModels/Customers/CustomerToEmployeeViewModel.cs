@@ -17,6 +17,8 @@ namespace RefregeratorRepairSystem.Models.ViewModels.Customers
 
         public decimal Salary { get; set; }
 
+        public string Address { get; set; }
+
         public ApplicationUser ApplicationUser { get; set; }
     }
 }
