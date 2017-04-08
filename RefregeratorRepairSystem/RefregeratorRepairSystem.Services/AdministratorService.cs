@@ -38,9 +38,10 @@ namespace RefregeratorRepairSystem.Services
         public void TransformCustomerToEmployee(CreateEmployeeBindingModel model)
         {
             Customer customer = this.Context.Customers.Find(model.Id);
-            this.Context.Customers.Remove(customer);
-
             Employee employee = Mapper.Map<Employee>(model);
+            employee.ApplicationUser = customer.ApplicationUser;
+
+            this.Context.Customers.Remove(customer);
             this.Context.Employees.Add(employee);
             this.Context.SaveChanges();
         }

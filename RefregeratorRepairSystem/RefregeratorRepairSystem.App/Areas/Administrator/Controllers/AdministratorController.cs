@@ -58,14 +58,14 @@ namespace RefregeratorRepairSystem.App.Areas.Administrator.Controllers
         [HttpPost]
         [Route("createEmployee/{id:int}")]
         public ActionResult CreateEmployee(
-            [Bind(Include = "Id, FirstName, LastName, Salary")] CreateEmployeeBindingModel model)
+            [Bind(Include = "Id, FirstName, LastName, Salary, ApplicationUser")] CreateEmployeeBindingModel model)
         {
             if (this.ModelState.IsValid)
             {
                 this.service.TransformCustomerToEmployee(model);
                 IdentityUser user = UserManager.FindByName(this.User.Identity.Name);
-                UserManager.RemoveFromRole(user.Id, "Customer");
                 UserManager.AddToRole(user.Id, "Employee");
+                UserManager.RemoveFromRole(user.Id, "Customer");
                 return this.RedirectToAction("Index");
             }
 

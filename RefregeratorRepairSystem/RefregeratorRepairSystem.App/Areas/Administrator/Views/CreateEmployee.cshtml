@@ -8,7 +8,7 @@
 <h1>Create an employee</h1>
 @using (Html.BeginForm())
 {
-    <table class="table table-striped">
+    <div><table class="table table-striped">
         <tr>
             <th>
                 @Html.DisplayNameFor(m => m.FirstName)
@@ -21,6 +21,7 @@
             <th>
                 @Html.DisplayNameFor(m => m.Salary)
             </th>
+            <th></th>
 
             <th>
                 Are you sure you want to make that customer an employee?
@@ -37,12 +38,15 @@
             </td>
 
             <td>
-                @Html.EditorFor(m => m.Salary, new { htmlAttribute = new { @class = "form-control"}})
+                @Html.EditorFor(m => m.Salary, new {htmlAttribute = new {@class = "form-control"}})
+            </td>
+            <td>
+                <input type="hidden" name="ApplicationUser" value="@Model.ApplicationUser"  disabled="disabled"/>
             </td>
             <td>
                 <a class="btn btn-danger button2" href="~/administrator/index">Cancel</a>
                 <input type="submit" class="btn btn-success button2" value="Create an Employee" />
             </td>
         </tr>
-    </table>
+    </table></div>
 }
