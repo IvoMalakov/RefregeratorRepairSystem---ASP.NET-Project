@@ -2,7 +2,7 @@
 {
     using RefregeratorRepairSystem.Models.EntityModels;
 
-    public class CreateEmployeeBindingModel
+    public class FiredEmployeeBindingModel
     {
         public int Id { get; set; }
 

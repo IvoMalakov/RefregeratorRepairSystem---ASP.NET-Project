@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+<h1>Home</h1>
+<div class="row">
+    <div class="col-md-6">
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    Действия
+                </th>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.ActionLink("Назначи работник", "Index", "Administrator")
+                </td>
+
+                <td>
+                    @Html.ActionLink("Уволни работник", "AllEmployees", "Administrator");
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+

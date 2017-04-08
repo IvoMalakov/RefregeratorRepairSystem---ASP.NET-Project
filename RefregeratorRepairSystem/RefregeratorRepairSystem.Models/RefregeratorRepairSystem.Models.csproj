@@ -61,6 +61,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
       <Private>True</Private>
@@ -85,6 +86,7 @@
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -94,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BindingModels\CreateEmployeeBindingModel.cs" />
+    <Compile Include="BindingModels\FiredEmployeeBindingModel.cs" />
     <Compile Include="EntityModels\ApplicationUser.cs" />
     <Compile Include="EntityModels\Customer.cs" />
     <Compile Include="EntityModels\Employee.cs" />
@@ -113,6 +116,8 @@
     <Compile Include="ViewModels\Account\VerifyCodeViewModel.cs" />
     <Compile Include="ViewModels\Customers\CustomerToEmployeeViewModel.cs" />
     <Compile Include="ViewModels\Customers\ListCustomerViewModel.cs" />
+    <Compile Include="ViewModels\Employees\EmployeeForFiredViewModel.cs" />
+    <Compile Include="ViewModels\Employees\ListEmployeeViewModel.cs" />
     <Compile Include="ViewModels\Menage\AddPhoneNumberViewModel.cs" />
     <Compile Include="ViewModels\Menage\ChangePasswordViewModel.cs" />
     <Compile Include="ViewModels\Menage\ConfigureTwoFactorViewModel.cs" />

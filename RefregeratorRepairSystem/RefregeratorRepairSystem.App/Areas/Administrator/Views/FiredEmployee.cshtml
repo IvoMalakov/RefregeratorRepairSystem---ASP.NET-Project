@@ -1,0 +1,61 @@
+﻿@using RefregeratorRepairSystem.Models.ViewModels.Employees
+@model EmployeeForFiredViewModel
+
+@{
+    ViewBag.Title = "FiredEmployee";
+}
+
+<h1>Уволни този работник</h1>
+
+@using (Html.BeginForm())
+{
+    <div>
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(m => m.FirstName)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(m => m.LastName)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(m => m.Salary)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(m => m.ApplicationUser.PhoneNumber)
+            </th>
+
+            <th>
+                Сигурен ли сте че искате да уволните този работник?
+            </th>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.EditorFor(model => model.FirstName, new { htmlAttribute = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+            </td>
+
+            <td>
+                @Html.EditorFor(model => model.LastName, new { htmlAttribute = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+            </td>
+
+            <td>
+                @Html.EditorFor(model => model.Salary, new {htmlAttribute = new {@class = "form-control", disable = "disable", @readonly = "readonly"}})
+            </td>
+
+            <td>
+                @Html.EditorFor(model => model.ApplicationUser.PhoneNumber, new { htmlAttribute = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+            </td>
+
+            <td>
+                <a class="btn btn-danger button2" href="~/administrator/home">Cancel</a>
+                <input type="submit" class="btn btn-success button2" value="Fired an Employee" />
+            </td>
+        </tr>
+    </table>
+</div>
+}
+

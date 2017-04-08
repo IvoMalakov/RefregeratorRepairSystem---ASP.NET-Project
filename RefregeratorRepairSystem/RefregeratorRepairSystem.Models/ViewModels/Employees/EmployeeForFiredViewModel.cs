@@ -1,8 +1,8 @@
-﻿namespace RefregeratorRepairSystem.Models.BindingModels
+﻿namespace RefregeratorRepairSystem.Models.ViewModels.Employees
 {
     using RefregeratorRepairSystem.Models.EntityModels;
 
-    public class CreateEmployeeBindingModel
+    public class EmployeeForFiredViewModel
     {
         public int Id { get; set; }
 
@@ -12,6 +12,6 @@
 
         public decimal Salary { get; set; }
 
-        public virtual ApplicationUser ApplicationUser { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
     }
 }
