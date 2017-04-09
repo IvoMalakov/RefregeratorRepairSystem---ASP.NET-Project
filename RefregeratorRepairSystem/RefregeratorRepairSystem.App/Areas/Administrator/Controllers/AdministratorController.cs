@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using RefregeratorRepairSystem.App.Attributes;
 using RefregeratorRepairSystem.Models.BindingModels;
 using RefregeratorRepairSystem.Models.EntityModels;
 using RefregeratorRepairSystem.Models.ViewModels.Customers;
@@ -14,7 +15,7 @@ using RefregeratorRepairSystem.Services;
 
 namespace RefregeratorRepairSystem.App.Areas.Administrator.Controllers
 {
-    [Authorize(Roles = "Administrator")]
+    [MyAuthorize(Roles = "Administrator")]
     [RoutePrefix("Administrator")]
     public class AdministratorController : Controller
     {

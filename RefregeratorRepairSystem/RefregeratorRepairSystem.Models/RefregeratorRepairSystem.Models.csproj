@@ -126,6 +126,7 @@
     <Compile Include="ViewModels\Menage\ManageLoginsViewModel.cs" />
     <Compile Include="ViewModels\Menage\SetPasswordViewModel.cs" />
     <Compile Include="ViewModels\Menage\VerifyPhoneNumberViewModel.cs" />
+    <Compile Include="ViewModels\Repairs\ListRepairsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

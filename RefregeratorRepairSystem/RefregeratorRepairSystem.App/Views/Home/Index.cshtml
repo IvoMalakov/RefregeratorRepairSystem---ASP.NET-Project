@@ -10,8 +10,9 @@
     <div class="col-md-6">
         <table class="table table-striped">
             <tr>
-                <th>Климатици</th>
-                <th>Хладилници</th>
+                <th>Ремонти</th>
+                <th>Изделия</th>
+                <th>Части</th>
                 @{
                     if (Request.IsAuthenticated && User.IsInRole("Administrator"))
                     {
@@ -20,8 +21,9 @@
                 }
             </tr>
             <tr>
-                <td><a class="btn btn-primary button1" href="~/airconditioners/index">Отиди на секцията за климатици</a></td>
-                <td><a class="btn btn-warning button1" href="~/refrigerators/index">Отиди на секцията за хладилници</a></td>
+                <td><a class="btn btn-primary button1" href="~/repairs/allRepairs">Отиди на секцията за ремонти</a></td>
+                <td><a class="btn btn-success button1" href="~/items/allItems">Отиди на секцията за изделията</a></td>
+                <td><a class="btn btn-warning button1" href="~/parts/allParts">Отиди на секцията за части</a></td>
                 @{
                     if (Request.IsAuthenticated && User.IsInRole("Administrator"))
                     {

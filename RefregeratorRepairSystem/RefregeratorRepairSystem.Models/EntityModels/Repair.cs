@@ -23,6 +23,8 @@ namespace RefregeratorRepairSystem.Models.EntityModels
 
         public double Discount { get; set; }
 
+        public string ActionsTaken { get; set; }
+
         public virtual ICollection<Item> Items { get; set; }
 
     }

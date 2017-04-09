@@ -10,6 +10,7 @@ using RefregeratorRepairSystem.Models.EntityModels;
 using RefregeratorRepairSystem.Models.ViewModels.Account;
 using RefregeratorRepairSystem.Models.ViewModels.Customers;
 using RefregeratorRepairSystem.Models.ViewModels.Employees;
+using RefregeratorRepairSystem.Models.ViewModels.Repairs;
 
 [assembly: OwinStartupAttribute(typeof(RefregeratorRepairSystem.App.Startup))]
 namespace RefregeratorRepairSystem.App
@@ -32,6 +33,11 @@ namespace RefregeratorRepairSystem.App
                 expression.CreateMap<CreateEmployeeBindingModel, Employee>();
                 expression.CreateMap<Employee, ListEmployeeViewModel>();
                 expression.CreateMap<Employee, EmployeeForFiredViewModel>();
+                expression.CreateMap<Repair, ListRepairsViewModel>()
+                    .ForMember(vm => vm.Customer,
+                        configuretionExpress =>
+                            configuretionExpress.MapFrom(
+                                repair => repair.Customer.FirstName + " " + repair.Customer.LastName));
             });
         }
     }

@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="AccountService.cs" />
     <Compile Include="AdministratorService.cs" />
+    <Compile Include="RepairsService.cs" />
     <Compile Include="Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
