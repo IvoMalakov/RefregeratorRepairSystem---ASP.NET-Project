@@ -15,6 +15,8 @@
     <thead>
     <tr class="custom-navs">
         <th>@Html.DisplayNameFor(m => m.Customer)</th>
+        <th>@Html.DisplayNameFor(m => m.Employee)</th>
+        <th>@Html.DisplayNameFor(m => m.Item)</th>
         <th>@Html.DisplayNameFor(m => m.ActionsTaken)</th>
         <th>@Html.DisplayNameFor(m => m.Price)</th>
         <th>Действия</th>
@@ -26,6 +28,8 @@
     {
         <tr>
             <td>@Html.DisplayFor(modelItem => item.Customer)</td>
+            <td>@Html.DisplayFor(modelItem => item.Employee)</td>
+            <td>@Html.DisplayFor(modelItem => item.Item)</td>
             <td>@Html.DisplayFor(modelItem => item.ActionsTaken)</td>
             <td>@Html.DisplayFor(modelItem => item.Price)</td>
             <td>

@@ -1,9 +1,15 @@
 ﻿namespace RefregeratorRepairSystem.Models.EntityModels
 {
     using System.ComponentModel.DataAnnotations;
+    using System.Collections.Generic;
 
     public class Customer
     {
+        public Customer()
+        {
+            this.Repairs = new HashSet<Repair>();
+        }
+
         [Key]
         public int Id { get; set; }
 
@@ -22,5 +28,7 @@
         public string LastName { get; set; }
 
         public virtual ApplicationUser ApplicationUser { get; set; }
+
+        public virtual ICollection<Repair> Repairs { get; set; } 
     }
 }

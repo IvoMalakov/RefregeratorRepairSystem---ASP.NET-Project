@@ -6,6 +6,10 @@
 
         public string Customer { get; set; }
 
+        public string Employee { get; set; }
+
+        public string Item { get; set; }
+
         public decimal Price { get; set; }
 
         public string ActionsTaken { get; set; }

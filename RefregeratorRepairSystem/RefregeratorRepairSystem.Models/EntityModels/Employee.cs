@@ -1,9 +1,15 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace RefregeratorRepairSystem.Models.EntityModels
+﻿namespace RefregeratorRepairSystem.Models.EntityModels
 {
+    using System.ComponentModel.DataAnnotations;
+    using System.Collections.Generic;
+
     public class Employee
     {
+        public Employee()
+        {
+            this.Repairs = new HashSet<Repair>();
+        }
+
        
         [Key]
         public int Id { get; set; }
@@ -17,5 +23,7 @@ namespace RefregeratorRepairSystem.Models.EntityModels
         public virtual ApplicationUser ApplicationUser { get; set; }
 
         public decimal Salary { get; set; }
+
+        public virtual ICollection<Repair> Repairs { get; set; }
     }
 }

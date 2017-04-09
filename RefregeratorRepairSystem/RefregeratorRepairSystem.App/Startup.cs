@@ -37,7 +37,16 @@ namespace RefregeratorRepairSystem.App
                     .ForMember(vm => vm.Customer,
                         configuretionExpress =>
                             configuretionExpress.MapFrom(
-                                repair => repair.Customer.FirstName + " " + repair.Customer.LastName));
+                                repair => repair.Customer.FirstName + " " + repair.Customer.LastName))
+                    .ForMember(vm => vm.Employee,
+                        configuretionExpress =>
+                            configuretionExpress.MapFrom(
+                                repair => repair.Employee.FirstName + " " + repair.Employee.LastName))
+                    .ForMember(vm => vm.Item,
+                        configuretionExpress =>
+                            configuretionExpress.MapFrom(
+                                repair => repair.Item.Type));
+
             });
         }
     }

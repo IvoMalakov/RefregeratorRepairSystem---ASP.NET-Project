@@ -1,5 +1,7 @@
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using RefregeratorRepairSystem.Models.EntityModels;
+using RefregeratorRepairSystem.Models.Enums;
 
 namespace RefregeratorRepairSystem.Data.Migrations
 {
