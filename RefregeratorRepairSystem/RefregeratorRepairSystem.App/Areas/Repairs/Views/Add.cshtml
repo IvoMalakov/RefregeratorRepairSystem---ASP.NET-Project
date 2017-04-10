@@ -1,0 +1,52 @@
+﻿@using RefregeratorRepairSystem.Models.ViewModels.Repairs.AddRepairsViewModels
+@model AddRepairViewModel
+
+@{
+    ViewBag.Title = "Add";
+}
+
+<h1>Добави нов ремонт</h1>
+
+@using (Html.BeginForm())
+{
+    <label for="Customer" class="col-form-label">Customer: </label>
+    <select class="form-control" name="CustomerId" id="Customer">
+        @{
+            foreach (var customer in Model.Customers)
+            {
+                <option value="@customer.Id">@customer.Name</option>
+            }
+        }
+    </select>
+
+    <label for="Employee" class="col-form-label">EmployeeInCharge: </label>
+    <select class="form-control" name="EmployeeId" id="Employee">
+        @{
+            foreach (var employee in Model.Employees)
+            {
+                <option value="@employee.Id">@employee.Name</option>
+            }
+        }
+    </select>
+
+    <label for="Item" class="col-form-label">Item: </label>
+    <select class="form-control" name="ItemId" id="Item">
+        @{
+            foreach (var item in Model.Items)
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+        }
+    </select>
+
+    @Html.LabelFor(r => r.ActionsTaken)
+    @Html.EditorFor(r => r.ActionsTaken, new { htmlAttribute = new {@class = "form-control", @name = "ActionsTaken" } })
+
+    @Html.LabelFor(r => r.Price)
+    @Html.EditorFor(r => r.Price, new { htmlAttribute = new { @class = "form-control", @name = "Price" } })
+
+    <div>
+        <a class="btn btn-danger button3" href="~/Repairs/AllRepairs">Върни се на страницата с ремонтите</a>
+        <input type="submit" class="btn btn-success button3" value="Добави нов ремонт" />
+    </div>
+}

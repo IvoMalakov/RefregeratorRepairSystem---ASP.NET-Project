@@ -1,6 +1,6 @@
 ﻿namespace RefregeratorRepairSystem.Models.ViewModels.Repairs
 {
-    public class ListRepairsViewModel
+    public class DetailedRepairViewModel
     {
         public int Id { get; set; }
 
@@ -8,12 +8,10 @@
 
         public string EmployeeInCharge { get; set; }
 
-        public string Item { get; set; }
+        public string RepairItem { get; set; }
 
         public decimal Price { get; set; }
 
         public string ActionsTaken { get; set; }
-
-        public double Discount { get; set; }
     }
 }

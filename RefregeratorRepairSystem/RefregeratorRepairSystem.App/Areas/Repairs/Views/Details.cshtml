@@ -1,34 +1,66 @@
-﻿@model RefregeratorRepairSystem.Models.EntityModels.Repair
+﻿@using RefregeratorRepairSystem.Models.ViewModels.Repairs
+@model DetailedRepairViewModel
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h1>Детайли за ремонт номер <span class="red">@Model.Id</span> за клиента <span class="red">@Model.Customer</span></h1>
 
-<div>
-    <h4>Repair</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
+<table class="table table-striped special-table">
+    <tr class="custom-navs">
+        <th>
+            @Html.DisplayNameFor(m => m.Customer)
+        </th>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Discount)
-        </dt>
+        <th>
+            @Html.DisplayNameFor(m => m.EmployeeInCharge)
+        </th>
 
-        <dd>
-            @Html.DisplayFor(model => model.Discount)
-        </dd>
+        <th>
+            @Html.DisplayNameFor(m => m.RepairItem)
+        </th>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+        <th>
+            @Html.DisplayNameFor(m => m.ActionsTaken)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.Price)
+        </th>
+
+        <th>
+            Действия
+        </th>
+    </tr>
+
+    <tr>
+        <td>
+            @Html.EditorFor(model => model.Customer, new { htmlAttribute = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+        </td>
+
+        <td>
+            @Html.EditorFor(model => model.EmployeeInCharge, new { htmlAttribute = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+        </td>
+
+        <td>
+            @Html.EditorFor(model => model.RepairItem, new { htmlAttribute = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+        </td>
+
+        <td>
+            @Html.EditorFor(model => model.ActionsTaken, new { htmlAttribute = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+        </td>
+
+        <td>
+            @Html.EditorFor(m => m.Price, new {htmlAttribute = new {@class = "form-control"}})
+        </td>
+
+        <td>
+            @Html.ActionLink("Назад", "AllRepairs","Repairs", null, new { @class = "btn btn-success button2" })
+            @Html.ActionLink("Редактиране", "Edit", "Repairs", new { id = Model.Id }, new { @class = "btn btn-primary button2"})
+            @Html.ActionLink("Изтриване", "Delete", "Repairs",  new { id = Model.Id }, new { @class = "btn btn-danger button2" })
+            
+        </td>
+    </tr>
+</table>

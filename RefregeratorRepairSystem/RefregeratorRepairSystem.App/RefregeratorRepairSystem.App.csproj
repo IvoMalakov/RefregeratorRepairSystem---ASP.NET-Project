@@ -212,7 +212,7 @@
     <Content Include="Areas\Administrator\Views\Button_Central_Partial.cshtml" />
     <Content Include="Areas\Repairs\Views\web.config" />
     <Content Include="Areas\Repairs\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Repairs\Views\Create.cshtml" />
+    <Content Include="Areas\Repairs\Views\Add.cshtml" />
     <Content Include="Areas\Repairs\Views\Delete.cshtml" />
     <Content Include="Areas\Repairs\Views\Details.cshtml" />
     <Content Include="Areas\Repairs\Views\Edit.cshtml" />

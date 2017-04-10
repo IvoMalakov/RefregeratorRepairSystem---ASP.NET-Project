@@ -95,7 +95,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BindingModels\AddRepairBindingModel.cs" />
     <Compile Include="BindingModels\CreateEmployeeBindingModel.cs" />
+    <Compile Include="BindingModels\DeleteRepairBindingModel.cs" />
+    <Compile Include="BindingModels\EditRepairBindingModel.cs" />
     <Compile Include="BindingModels\FiredEmployeeBindingModel.cs" />
     <Compile Include="EntityModels\ApplicationUser.cs" />
     <Compile Include="EntityModels\Customer.cs" />
@@ -126,6 +129,13 @@
     <Compile Include="ViewModels\Menage\ManageLoginsViewModel.cs" />
     <Compile Include="ViewModels\Menage\SetPasswordViewModel.cs" />
     <Compile Include="ViewModels\Menage\VerifyPhoneNumberViewModel.cs" />
+    <Compile Include="ViewModels\Repairs\AddRepairsViewModels\AddRepairViewModel.cs" />
+    <Compile Include="ViewModels\Repairs\AddRepairsViewModels\CustomerRepairViewModel.cs" />
+    <Compile Include="ViewModels\Repairs\AddRepairsViewModels\EmployeeRepairViewModel.cs" />
+    <Compile Include="ViewModels\Repairs\AddRepairsViewModels\ItemRepairViewModel.cs" />
+    <Compile Include="ViewModels\Repairs\DeleteRepairViewModel.cs" />
+    <Compile Include="ViewModels\Repairs\DetailedRepairViewModel.cs" />
+    <Compile Include="ViewModels\Repairs\EditRepairViewModel.cs" />
     <Compile Include="ViewModels\Repairs\ListRepairsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
