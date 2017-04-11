@@ -40,6 +40,7 @@ namespace RefregeratorRepairSystem.App.Areas.Repairs.Controllers
 
         [HttpPost]
         [Route("Add")]
+        [ValidateAntiForgeryToken]
         public ActionResult Add(
             [Bind(Include = "Price, ActionsTaken, CustomerId, EmployeeId, ItemId")] AddRepairBindingModel model)
         {
@@ -70,7 +71,7 @@ namespace RefregeratorRepairSystem.App.Areas.Repairs.Controllers
                 return this.RedirectToAction("AllRepairs");
             }
 
-            return this.RedirectToAction("Edit");
+            return this.RedirectToAction("Edit", "Repairs", new {id = model.Id});
         }
 
         [HttpGet]
@@ -91,7 +92,7 @@ namespace RefregeratorRepairSystem.App.Areas.Repairs.Controllers
                 return this.RedirectToAction("AllRepairs");
             }
 
-            return this.RedirectToAction("Delete");
+            return this.RedirectToAction("Delete", "Repairs", new {id = model.Id});
         }
 
         [Route("{id:int}")]

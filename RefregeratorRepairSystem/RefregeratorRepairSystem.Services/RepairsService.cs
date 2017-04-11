@@ -92,11 +92,14 @@ namespace RefregeratorRepairSystem.Services
         {
             Repair repair = this.Context.Repairs.Find(model.Id);
 
-            repair.Price = model.Price;
-            repair.ActionsTaken = model.ActionsTaken;
-            repair.EmployeeInCharge = this.Context.Employees.Find(model.EmployeeId);
+            if (repair != null)
+            {
+                repair.Price = model.Price;
+                repair.ActionsTaken = model.ActionsTaken;
+                repair.EmployeeInCharge = this.Context.Employees.Find(model.EmployeeId);
 
-            this.Context.SaveChanges();
+                this.Context.SaveChanges();
+            }
         }
 
         public DeleteRepairViewModel GetRepairForDeletion(int id)

@@ -11,6 +11,9 @@
 {
     @Html.AntiForgeryToken()
 
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.Id)
+
     <label for="Employee" class="col-form-label">EmployeeInCharge: </label>
     <select class="form-control" name="EmployeeId" id="Employee">
         @{
@@ -23,9 +26,11 @@
 
     @Html.LabelFor(r => r.ActionsTaken)
     @Html.EditorFor(r => r.ActionsTaken, new { htmlAttribute = new { @class = "form-control", @name = "ActionsTaken" } })
+    @Html.ValidationMessageFor(r => r.ActionsTaken, "Your description must be at least 3 symbols long", new {@class = "red"})
 
     @Html.LabelFor(r => r.Price)
     @Html.EditorFor(r => r.Price, new { htmlAttribute = new { @class = "form-control", @name = "Price" } })
+    @Html.ValidationMessageFor(r => r.Price, "Your price needs to be a positve number", new { @class = "red" })
 
     <div>
         <input type="submit" class="btn btn-danger button3" value="Редактирай този ремонт" />

@@ -1,0 +1,67 @@
+﻿@using RefregeratorRepairSystem.Models.ViewModels.Items
+@model AddItemViewModel
+
+@{
+    ViewBag.Title = "Add";
+}
+
+<h1>Добави нов изделие</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    @Html.LabelFor(r => r.Make)
+    @Html.EditorFor(r => r.Make, new { htmlAttribute = new { @class = "form-control", @name = "Make" } })
+    @Html.ValidationMessageFor(r => r.Make, "Make name must be at least 3 symbols long", new { @class = "red" })
+
+    @Html.LabelFor(r => r.Model)
+    @Html.EditorFor(r => r.Model, new { htmlAttribute = new { @class = "form-control", @name = "Model" } })
+    @Html.ValidationMessageFor(r => r.Model, "Model name must be at least 3 symbols long", new { @class = "red" })
+
+    <label for="Type" class="col-form-label">Type: </label>
+    <select class="form-control" name="Type" id="Type">
+        @{
+            foreach (var type in Model.Types)
+            {
+                <option value="@type">@type</option>
+            }
+        }
+    </select>
+
+    <label for="Part1" class="col-form-label">Part1: </label>
+    <select class="form-control" name="Part1" id="Part1">
+        @{
+            foreach (var part in Model.Parts)
+            {
+                <option value="@part.Id">@part.Name</option>
+            }
+        }
+    </select>
+
+    <label for="Part2" class="col-form-label">Part2: </label>
+    <select class="form-control" name="Part2" id="Part2">
+        @{
+            foreach (var part in Model.Parts)
+            {
+                <option value="@part.Id">@part.Name</option>
+            }
+        }
+    </select>
+
+    <label for="Part3" class="col-form-label">Part3: </label>
+    <select class="form-control" name="Part3" id="Part3">
+        @{
+            foreach (var part in Model.Parts)
+            {
+                <option value="@part.Id">@part.Name</option>
+            }
+        }
+    </select>
+
+    <div>
+        <a class="btn btn-danger button3" href="~/Items/AllItems">Върни се на страницата с изделията</a>
+        <input type="submit" class="btn btn-success button3" value="Добави ново изделие" />
+    </div>
+}

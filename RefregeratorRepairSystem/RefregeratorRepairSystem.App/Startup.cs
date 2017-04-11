@@ -8,9 +8,12 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using RefregeratorRepairSystem.Data;
 using RefregeratorRepairSystem.Models.BindingModels;
 using RefregeratorRepairSystem.Models.EntityModels;
+using RefregeratorRepairSystem.Models.Enums;
 using RefregeratorRepairSystem.Models.ViewModels.Account;
 using RefregeratorRepairSystem.Models.ViewModels.Customers;
 using RefregeratorRepairSystem.Models.ViewModels.Employees;
+using RefregeratorRepairSystem.Models.ViewModels.Items;
+using RefregeratorRepairSystem.Models.ViewModels.Parts;
 using RefregeratorRepairSystem.Models.ViewModels.Repairs;
 using RefregeratorRepairSystem.Models.ViewModels.Repairs.AddRepairsViewModels;
 
@@ -97,6 +100,7 @@ namespace RefregeratorRepairSystem.App
                                 repair => repair.Item.Type + " - " + repair.Item.Make + " " + repair.Item.Model));
 
                 expression.CreateMap<Repair, EditRepairViewModel>();
+                expression.CreateMap<Part, PartForItemVIewModel>();
 
                 expression.CreateMap<Repair, DeleteRepairViewModel>()
                     .ForMember(vm => vm.Customer,
@@ -107,6 +111,15 @@ namespace RefregeratorRepairSystem.App
                         configurationExpress =>
                             configurationExpress.MapFrom(
                                 repair => repair.Item.Type + " - " + repair.Item.Make + " " + repair.Item.Model));
+
+                expression.CreateMap<AddItemBindingModel, Item>()
+                    .ForMember(it => it.Type,
+                        configurationExpress =>
+                            configurationExpress.MapFrom(
+                                bm => Enum.Parse(typeof (ItemType), bm.Type)));
+
+                expression.CreateMap<Item, ListItemsViewModel>();
+                expression.CreateMap<Item, EditItemViewModel>();
             });
         }
     }

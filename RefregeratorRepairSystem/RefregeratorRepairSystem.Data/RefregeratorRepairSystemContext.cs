@@ -24,5 +24,7 @@ namespace RefregeratorRepairSystem.Data
         {
             return new RefregeratorRepairSystemContext();
         }
+
+        public System.Data.Entity.DbSet<RefregeratorRepairSystem.Models.EntityModels.Part> Parts { get; set; }
     }
 }

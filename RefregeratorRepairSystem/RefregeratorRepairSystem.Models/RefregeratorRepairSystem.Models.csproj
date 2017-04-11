@@ -95,9 +95,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BindingModels\AddItemBindingModel.cs" />
     <Compile Include="BindingModels\AddRepairBindingModel.cs" />
     <Compile Include="BindingModels\CreateEmployeeBindingModel.cs" />
     <Compile Include="BindingModels\DeleteRepairBindingModel.cs" />
+    <Compile Include="BindingModels\EditItemBindingModel.cs" />
     <Compile Include="BindingModels\EditRepairBindingModel.cs" />
     <Compile Include="BindingModels\FiredEmployeeBindingModel.cs" />
     <Compile Include="EntityModels\ApplicationUser.cs" />
@@ -121,6 +123,9 @@
     <Compile Include="ViewModels\Customers\ListCustomerViewModel.cs" />
     <Compile Include="ViewModels\Employees\EmployeeForFiredViewModel.cs" />
     <Compile Include="ViewModels\Employees\ListEmployeeViewModel.cs" />
+    <Compile Include="ViewModels\Items\AddItemViewModel.cs" />
+    <Compile Include="ViewModels\Items\EditItemViewModel.cs" />
+    <Compile Include="ViewModels\Items\ListItemsViewModel.cs" />
     <Compile Include="ViewModels\Menage\AddPhoneNumberViewModel.cs" />
     <Compile Include="ViewModels\Menage\ChangePasswordViewModel.cs" />
     <Compile Include="ViewModels\Menage\ConfigureTwoFactorViewModel.cs" />
@@ -129,6 +134,7 @@
     <Compile Include="ViewModels\Menage\ManageLoginsViewModel.cs" />
     <Compile Include="ViewModels\Menage\SetPasswordViewModel.cs" />
     <Compile Include="ViewModels\Menage\VerifyPhoneNumberViewModel.cs" />
+    <Compile Include="ViewModels\Parts\PartForItemVIewModel.cs" />
     <Compile Include="ViewModels\Repairs\AddRepairsViewModels\AddRepairViewModel.cs" />
     <Compile Include="ViewModels\Repairs\AddRepairsViewModels\CustomerRepairViewModel.cs" />
     <Compile Include="ViewModels\Repairs\AddRepairsViewModels\EmployeeRepairViewModel.cs" />
@@ -142,7 +148,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
