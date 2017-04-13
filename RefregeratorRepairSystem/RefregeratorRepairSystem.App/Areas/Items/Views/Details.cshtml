@@ -1,42 +1,70 @@
-﻿@model RefregeratorRepairSystem.Models.EntityModels.Item
+﻿@using RefregeratorRepairSystem.Models.ViewModels.Items
+@model DetailedItemVIewModel
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h1>Детайли за изделие номер <span class="red">@Model.Id</span></h1>
 
-<div>
-    <h4>Item</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Type)
-        </dt>
+<div class="custom-divs">
+    <table class="table table-striped special-table">
+        <tr class="custom-navs">
+            <th>
+                @Html.DisplayNameFor(m => m.Type)
+            </th>
 
-        <dd>
-            @Html.DisplayFor(model => model.Type)
-        </dd>
+            <th>
+                @Html.DisplayNameFor(m => m.Make)
+            </th>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Make)
-        </dt>
+            <th>
+                @Html.DisplayNameFor(m => m.Model)
+            </th>
+        </tr>
 
-        <dd>
-            @Html.DisplayFor(model => model.Make)
-        </dd>
+        <tr>
+            <td>
+                @Html.EditorFor(model => model.Type, new { htmlAttribute = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+            </td>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Model)
-        </dt>
+            <td>
+                @Html.EditorFor(model => model.Make, new { htmlAttribute = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+            </td>
 
-        <dd>
-            @Html.DisplayFor(model => model.Model)
-        </dd>
-
-    </dl>
+            <td>
+                @Html.EditorFor(model => model.Model, new { htmlAttribute = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+            </td>
+        </tr>
+    </table>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+<div class="custom-divs">
+    <table class="table table-striped special-table">
+        <tr class="custom-navs">
+            @{
+                int count = 1;
+                foreach (var part in Model.Parts)
+                {
+                    <th>Part @count</th>
+                    count++;
+                }
+            }
+        </tr>
+
+        <tr>
+            @{
+                foreach (var part in Model.Parts)
+                {
+                    <td>
+                        <p>@part.Name</p>
+                    </td>
+                }
+            }
+        </tr>
+    </table>
+</div>
+
+@Html.ActionLink("Назад", "AllItems", "Items", null, new { @class = "btn btn-success button4" })
+@Html.ActionLink("Редактиране", "Edit", "Items", new { id = Model.Id }, new { @class = "btn btn-primary button4" })
+@Html.ActionLink("Изтриване", "Delete", "Items", new { id = Model.Id }, new { @class = "btn btn-danger button4" })

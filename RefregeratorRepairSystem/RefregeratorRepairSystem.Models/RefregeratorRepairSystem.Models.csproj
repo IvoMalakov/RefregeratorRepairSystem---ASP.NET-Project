@@ -98,6 +98,7 @@
     <Compile Include="BindingModels\AddItemBindingModel.cs" />
     <Compile Include="BindingModels\AddRepairBindingModel.cs" />
     <Compile Include="BindingModels\CreateEmployeeBindingModel.cs" />
+    <Compile Include="BindingModels\DeleteItemBindingModel.cs" />
     <Compile Include="BindingModels\DeleteRepairBindingModel.cs" />
     <Compile Include="BindingModels\EditItemBindingModel.cs" />
     <Compile Include="BindingModels\EditRepairBindingModel.cs" />
@@ -124,6 +125,8 @@
     <Compile Include="ViewModels\Employees\EmployeeForFiredViewModel.cs" />
     <Compile Include="ViewModels\Employees\ListEmployeeViewModel.cs" />
     <Compile Include="ViewModels\Items\AddItemViewModel.cs" />
+    <Compile Include="ViewModels\Items\DeleteItemViewModel.cs" />
+    <Compile Include="ViewModels\Items\DetailedItemVIewModel.cs" />
     <Compile Include="ViewModels\Items\EditItemViewModel.cs" />
     <Compile Include="ViewModels\Items\ListItemsViewModel.cs" />
     <Compile Include="ViewModels\Menage\AddPhoneNumberViewModel.cs" />

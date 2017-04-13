@@ -76,6 +76,36 @@ namespace RefregeratorRepairSystem.App.Areas.Items.Controllers
             return this.RedirectToAction("Edit", "Items", new {id = bindingModel.Id});
         }
 
+        [HttpGet]
+        [MyAuthorize(Roles = "Administrator, Employee")]
+        [Route("Delete/{id:int}")]
+        public ActionResult Delete(int id)
+        {
+            DeleteItemViewModel viewModel = this.service.GetItemForDeletion(id);
+            return View("~/Areas/Items/Views/Delete.cshtml", viewModel);
+        }
+
+        [HttpPost]
+        [MyAuthorize(Roles = "Administrator, Employee")]
+        [Route("Delete/{id:int}")]
+        public ActionResult Delete([Bind(Include = "Id")] DeleteItemBindingModel bindingModel)
+        {
+            if (ModelState.IsValid)
+            {
+                this.service.DeleteItem(bindingModel);
+                return this.RedirectToAction("AllItems");
+            }
+
+            return this.RedirectToAction("Delete", "Items", new {id = bindingModel.Id});
+        }
+
+        [Route("Details/{id:int}")]
+        public ActionResult Details(int id)
+        {
+            DetailedItemVIewModel viewModel = this.service.GetItemDetails(id);
+            return View("~/Areas/Items/Views/Details.cshtml", viewModel);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

@@ -33,6 +33,12 @@ label {
     margin: 30px 30px 3px 0;
 }
 
+.button4 {
+    margin-right: 30px;
+    width: 250px;
+    height: 25px;
+}
+
 .button-central {
     margin: 10px 350px;
 }
@@ -49,6 +55,11 @@ label {
 
 .custom-navs {
     color: crimson;
+}
+
+.custom-divs {
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .red {

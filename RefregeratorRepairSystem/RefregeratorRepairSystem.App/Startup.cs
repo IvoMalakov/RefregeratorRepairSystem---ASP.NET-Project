@@ -120,6 +120,8 @@ namespace RefregeratorRepairSystem.App
 
                 expression.CreateMap<Item, ListItemsViewModel>();
                 expression.CreateMap<Item, EditItemViewModel>();
+                expression.CreateMap<Item, DeleteItemViewModel>();
+                expression.CreateMap<Item, DetailedItemVIewModel>();
             });
         }
     }

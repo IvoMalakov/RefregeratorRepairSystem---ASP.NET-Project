@@ -96,5 +96,32 @@ namespace RefregeratorRepairSystem.Services
                 this.Context.SaveChanges();
             }
         }
+
+        public DeleteItemViewModel GetItemForDeletion(int id)
+        {
+            Item item = this.Context.Items.Find(id);
+
+            DeleteItemViewModel viewModel = Mapper.Map<DeleteItemViewModel>(item);
+            return viewModel;
+        }
+
+        public void DeleteItem(DeleteItemBindingModel bimBindingModel)
+        {
+            Item item = this.Context.Items.Find(bimBindingModel.Id);
+
+            if (item != null)
+            {
+                this.Context.Items.Remove(item);
+                this.Context.SaveChanges();
+            }
+        }
+
+        public DetailedItemVIewModel GetItemDetails(int id)
+        {
+            Item item = this.Context.Items.Find(id);
+            DetailedItemVIewModel viewModel = Mapper.Map<DetailedItemVIewModel>(item);
+
+            return viewModel;
+        }
     }
 }
