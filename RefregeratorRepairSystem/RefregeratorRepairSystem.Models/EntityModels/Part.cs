@@ -22,7 +22,7 @@
 
         public string Model { get; set; }
 
-        public int? Quantity { get; set; }
+        public int Quantity { get; set; }
 
         public virtual ICollection<Item> Items { get; set; }
     }

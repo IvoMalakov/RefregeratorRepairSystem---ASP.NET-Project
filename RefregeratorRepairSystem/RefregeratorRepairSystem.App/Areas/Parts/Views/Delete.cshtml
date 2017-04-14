@@ -1,56 +1,49 @@
-﻿@model RefregeratorRepairSystem.Models.EntityModels.Part
+﻿@using RefregeratorRepairSystem.Models.ViewModels.Parts
+@model DeletePartViewModel
 
 @{
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<h1>Изтрий тази част</h1>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Part</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+@using (Html.BeginForm())
+{
+    <div>
+        <table class="table table-striped special-table">
+            <tr class="custom-navs">
+                <th></th>
+                <th>
+                    @Html.DisplayNameFor(m => m.Name)
+                </th>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+                <th>
+                    @Html.DisplayNameFor(m => m.Model)
+                </th>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
+                <th>
+                    Сигурен ли сте че искате да изтриете тази част?
+                </th>
+            </tr>
 
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
+            <tr>
+                <td>
+                    @Html.HiddenFor(model => model.Id, new { htmlAttribute = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+                </td>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Model)
-        </dt>
+                <td>
+                    @Html.EditorFor(model => model.Name, new { htmlAttribute = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+                </td>
 
-        <dd>
-            @Html.DisplayFor(model => model.Model)
-        </dd>
+                <td>
+                    @Html.EditorFor(model => model.Model, new { htmlAttribute = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+                </td>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Quantity)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Quantity)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
-    }
-</div>
+                <td>
+                    <input type="submit" class="btn btn-danger button2" value="Изтрий частта" />
+                    <a class="btn btn-success button2" href="~/Parts/AllParts">Върни се на страницата с частите</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+}

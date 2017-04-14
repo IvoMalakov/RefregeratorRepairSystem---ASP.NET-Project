@@ -4,11 +4,11 @@
     using RefregeratorRepairSystem.Models.Enums;
     using RefregeratorRepairSystem.Models.ViewModels.Parts;
 
-    public class DetailedItemVIewModel
+    public class DetailedItemViewModel
     {
-        public DetailedItemVIewModel()
+        public DetailedItemViewModel()
         {
-            this.Parts = new HashSet<PartForItemVIewModel>();
+            this.Parts = new HashSet<PartForItemViewModel>();
         }
 
         public int Id { get; set; }
@@ -19,6 +19,6 @@
 
         public ItemType Type { get; set; }
 
-        public virtual ICollection<PartForItemVIewModel> Parts { get; set; }
+        public virtual ICollection<PartForItemViewModel> Parts { get; set; }
     }
 }

@@ -102,7 +102,7 @@ namespace RefregeratorRepairSystem.App.Areas.Items.Controllers
         [Route("Details/{id:int}")]
         public ActionResult Details(int id)
         {
-            DetailedItemVIewModel viewModel = this.service.GetItemDetails(id);
+            DetailedItemViewModel viewModel = this.service.GetItemDetails(id);
             return View("~/Areas/Items/Views/Details.cshtml", viewModel);
         }
 

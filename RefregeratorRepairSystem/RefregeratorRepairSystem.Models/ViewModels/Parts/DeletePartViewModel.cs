@@ -1,9 +1,11 @@
 ﻿namespace RefregeratorRepairSystem.Models.ViewModels.Parts
 {
-    public class PartForItemViewModel
+    public class DeletePartViewModel
     {
         public int Id { get; set; }
 
         public string Name { get; set; }
+
+        public string Model { get; set; }
     }
 }

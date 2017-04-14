@@ -96,11 +96,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BindingModels\AddItemBindingModel.cs" />
+    <Compile Include="BindingModels\AddPartBindingModel.cs" />
     <Compile Include="BindingModels\AddRepairBindingModel.cs" />
     <Compile Include="BindingModels\CreateEmployeeBindingModel.cs" />
     <Compile Include="BindingModels\DeleteItemBindingModel.cs" />
+    <Compile Include="BindingModels\DeletePartBindingModel.cs" />
     <Compile Include="BindingModels\DeleteRepairBindingModel.cs" />
     <Compile Include="BindingModels\EditItemBindingModel.cs" />
+    <Compile Include="BindingModels\EditPartBindingModel.cs" />
     <Compile Include="BindingModels\EditRepairBindingModel.cs" />
     <Compile Include="BindingModels\FiredEmployeeBindingModel.cs" />
     <Compile Include="EntityModels\ApplicationUser.cs" />
@@ -126,8 +129,9 @@
     <Compile Include="ViewModels\Employees\ListEmployeeViewModel.cs" />
     <Compile Include="ViewModels\Items\AddItemViewModel.cs" />
     <Compile Include="ViewModels\Items\DeleteItemViewModel.cs" />
-    <Compile Include="ViewModels\Items\DetailedItemVIewModel.cs" />
+    <Compile Include="ViewModels\Items\DetailedItemViewModel.cs" />
     <Compile Include="ViewModels\Items\EditItemViewModel.cs" />
+    <Compile Include="ViewModels\Items\ItemForPartViewModel.cs" />
     <Compile Include="ViewModels\Items\ListItemsViewModel.cs" />
     <Compile Include="ViewModels\Menage\AddPhoneNumberViewModel.cs" />
     <Compile Include="ViewModels\Menage\ChangePasswordViewModel.cs" />
@@ -137,7 +141,12 @@
     <Compile Include="ViewModels\Menage\ManageLoginsViewModel.cs" />
     <Compile Include="ViewModels\Menage\SetPasswordViewModel.cs" />
     <Compile Include="ViewModels\Menage\VerifyPhoneNumberViewModel.cs" />
-    <Compile Include="ViewModels\Parts\PartForItemVIewModel.cs" />
+    <Compile Include="ViewModels\Parts\AddPartViewModel.cs" />
+    <Compile Include="ViewModels\Parts\DeletePartViewModel.cs" />
+    <Compile Include="ViewModels\Parts\DetailedPartViewModel.cs" />
+    <Compile Include="ViewModels\Parts\EditPartViewModel.cs" />
+    <Compile Include="ViewModels\Parts\ListPartsViewModel.cs" />
+    <Compile Include="ViewModels\Parts\PartForItemViewModel.cs" />
     <Compile Include="ViewModels\Repairs\AddRepairsViewModels\AddRepairViewModel.cs" />
     <Compile Include="ViewModels\Repairs\AddRepairsViewModels\CustomerRepairViewModel.cs" />
     <Compile Include="ViewModels\Repairs\AddRepairsViewModels\EmployeeRepairViewModel.cs" />

@@ -1,0 +1,45 @@
+﻿@using RefregeratorRepairSystem.Models.ViewModels.Parts
+@model IEnumerable<ListPartsViewModel>
+
+@{
+    ViewBag.Title = "AllParts";
+}
+
+<h1>Списък на всички части монтирани на изделия ремонтирани в сервиза</h1>
+
+<p>
+    @Html.ActionLink("Добави нова част", "Add")
+</p>
+
+<table class="table table-hover table-striped">
+    <thead>
+        <tr class="custom-navs">
+            <th>@Html.DisplayNameFor(m => m.Name)</th>
+            <th>@Html.DisplayNameFor(m => m.Model)</th>
+            <th>@Html.DisplayNameFor(m => m.Price)</th>
+            <th>@Html.DisplayNameFor(m => m.Quantity)</th>
+            <th>Действия</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.Model)</td>
+                <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
+                <td>
+                    | @Html.ActionLink("Детайли", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Редактиране", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Изтриване", "Delete", new { id = item.Id }) |
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a class="btn btn-primary button2" href="~/Repairs/AllRepairs">Отиди на секцията за ремонтите</a>
+<a class="btn btn-success button2" href="~/Items/AllItems">Отиди на секцията за изделията</a>
+<a class="btn btn-danger button2" href="~/home">Върни се на началната страница</a>

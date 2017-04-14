@@ -10,7 +10,7 @@
         public AddItemViewModel()
         {
             this.Types = new HashSet<string>();
-            this.Parts = new HashSet<PartForItemVIewModel>();
+            this.Parts = new HashSet<PartForItemViewModel>();
         }
 
         [Required]
@@ -23,6 +23,6 @@
 
         public ICollection<string> Types { get; set; }
 
-        public  ICollection<PartForItemVIewModel> Parts { get; set; } 
+        public  ICollection<PartForItemViewModel> Parts { get; set; } 
     }
 }

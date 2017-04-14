@@ -100,7 +100,7 @@ namespace RefregeratorRepairSystem.App
                                 repair => repair.Item.Type + " - " + repair.Item.Make + " " + repair.Item.Model));
 
                 expression.CreateMap<Repair, EditRepairViewModel>();
-                expression.CreateMap<Part, PartForItemVIewModel>();
+                expression.CreateMap<Part, PartForItemViewModel>();
 
                 expression.CreateMap<Repair, DeleteRepairViewModel>()
                     .ForMember(vm => vm.Customer,
@@ -121,7 +121,25 @@ namespace RefregeratorRepairSystem.App
                 expression.CreateMap<Item, ListItemsViewModel>();
                 expression.CreateMap<Item, EditItemViewModel>();
                 expression.CreateMap<Item, DeleteItemViewModel>();
-                expression.CreateMap<Item, DetailedItemVIewModel>();
+                expression.CreateMap<Item, DetailedItemViewModel>();
+                expression.CreateMap<Part, ListPartsViewModel>();
+
+                expression.CreateMap<Item, ItemForPartViewModel>()
+                    .ForMember(vm => vm.ItemDescription,
+                        configurationExpress =>
+                            configurationExpress.MapFrom(
+                                item => item.Type + " - " + item.Make + " " + item.Model));
+
+                expression.CreateMap<AddPartBindingModel, Part>();
+                expression.CreateMap<Part, DetailedPartViewModel>();
+
+                expression.CreateMap<Part, EditPartViewModel>()
+                    .ForMember(vm => vm.PartDescription,
+                        configurationExpress =>
+                            configurationExpress.MapFrom(
+                                part => part.Name + " " + part.Model));
+
+                expression.CreateMap<Part, DeletePartViewModel>();
             });
         }
     }

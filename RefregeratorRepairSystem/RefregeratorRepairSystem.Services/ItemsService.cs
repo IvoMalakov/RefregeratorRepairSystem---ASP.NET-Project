@@ -27,8 +27,8 @@ namespace RefregeratorRepairSystem.Services
 
             foreach (var part in allParts)
             {
-                PartForItemVIewModel partVIewModel = Mapper.Map<PartForItemVIewModel>(part);
-                viewModel.Parts.Add(partVIewModel);
+                PartForItemViewModel partForItemViewModel = Mapper.Map<PartForItemViewModel>(part);
+                viewModel.Parts.Add(partForItemViewModel);
             }
 
             return viewModel;
@@ -116,10 +116,10 @@ namespace RefregeratorRepairSystem.Services
             }
         }
 
-        public DetailedItemVIewModel GetItemDetails(int id)
+        public DetailedItemViewModel GetItemDetails(int id)
         {
             Item item = this.Context.Items.Find(id);
-            DetailedItemVIewModel viewModel = Mapper.Map<DetailedItemVIewModel>(item);
+            DetailedItemViewModel viewModel = Mapper.Map<DetailedItemViewModel>(item);
 
             return viewModel;
         }

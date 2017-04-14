@@ -223,11 +223,11 @@
     <Content Include="Areas\Repairs\Views\AllRepairs.cshtml" />
     <Content Include="Areas\Parts\Views\web.config" />
     <Content Include="Areas\Parts\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Parts\Views\Create.cshtml" />
+    <Content Include="Areas\Parts\Views\Add.cshtml" />
     <Content Include="Areas\Parts\Views\Delete.cshtml" />
     <Content Include="Areas\Parts\Views\Details.cshtml" />
     <Content Include="Areas\Parts\Views\Edit.cshtml" />
-    <Content Include="Areas\Parts\Views\Index.cshtml" />
+    <Content Include="Areas\Parts\Views\AllParts.cshtml" />
     <Content Include="Areas\Items\Views\web.config" />
     <Content Include="Areas\Items\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Items\Views\Add.cshtml" />
