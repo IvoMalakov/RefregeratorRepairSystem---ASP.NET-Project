@@ -25,8 +25,15 @@ namespace RefregeratorRepairSystem.App.Areas.Items.Controllers
         [Route("AllItems")]
         public ActionResult AllItems()
         {
+            return View("~/Areas/Items/Views/AllItems.cshtml");
+        }
+
+        //Here I am using AJAX request to asynchronously load and display data.
+        [Route("LoadData")]
+        public ActionResult UpdateItems()
+        {
             IEnumerable<ListItemsViewModel> viewModels = this.service.GetAllItems();
-            return View("~/Areas/Items/Views/AllItems.cshtml", viewModels);
+            return this.PartialView("~/Areas/Items/Views/_ItemsPartial.cshtml", viewModels);
         }
 
         [HttpGet]

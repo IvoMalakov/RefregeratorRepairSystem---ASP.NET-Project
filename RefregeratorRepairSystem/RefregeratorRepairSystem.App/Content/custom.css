@@ -43,6 +43,13 @@ label {
     margin: 10px 350px;
 }
 
+.update-button {
+    margin-bottom: 25px;
+    margin-left: 280px;
+    width: 225px;
+    height: 30px;
+}
+
 .rememberMe {
     margin: 10px auto 10px 170px;
 }

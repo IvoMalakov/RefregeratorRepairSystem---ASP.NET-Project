@@ -235,6 +235,7 @@
     <Content Include="Areas\Items\Views\Details.cshtml" />
     <Content Include="Areas\Items\Views\Edit.cshtml" />
     <Content Include="Areas\Items\Views\AllItems.cshtml" />
+    <Content Include="Areas\Items\Views\_ItemsPartial.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
