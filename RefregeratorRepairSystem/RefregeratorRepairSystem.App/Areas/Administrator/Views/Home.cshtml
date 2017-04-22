@@ -3,7 +3,7 @@
     ViewBag.Title = "Home";
 }
 
-<h1>Home</h1>
+<h1>Администраторска страница</h1>
 <div class="row">
     <div class="col-md-6">
         <table class="table table-striped">
@@ -21,6 +21,8 @@
                 <td>
                     @Html.ActionLink("Уволни работник", "AllEmployees", "Administrator")
                 </td>
+
+                <td>@Html.ActionLink("Върни се на главната страница", "Index", "Home")</td>
             </tr>
         </table>
     </div>

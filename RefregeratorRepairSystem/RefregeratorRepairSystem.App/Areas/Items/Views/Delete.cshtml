@@ -49,7 +49,7 @@
 
                 <td>
                     <input type="submit" class="btn btn-danger button2" value="Изтрий изделието"/>
-                    <a class="btn btn-success button2" href="~/Items/AllItems">Върни се на страницата с изделията</a>
+                    @Html.ActionLink("Върни се на страницата с изделията", "AllItems", "Items", null, new { @class = "btn btn-success button2 "})
                 </td>
             </tr>
         </table>

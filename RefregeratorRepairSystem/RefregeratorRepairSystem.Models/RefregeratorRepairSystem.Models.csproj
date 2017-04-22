@@ -109,6 +109,7 @@
     <Compile Include="EntityModels\ApplicationUser.cs" />
     <Compile Include="EntityModels\Customer.cs" />
     <Compile Include="EntityModels\Employee.cs" />
+    <Compile Include="EntityModels\ModelValidators\ModelValidator.cs" />
     <Compile Include="EntityModels\Part.cs" />
     <Compile Include="EntityModels\Item.cs" />
     <Compile Include="EntityModels\Repair.cs" />

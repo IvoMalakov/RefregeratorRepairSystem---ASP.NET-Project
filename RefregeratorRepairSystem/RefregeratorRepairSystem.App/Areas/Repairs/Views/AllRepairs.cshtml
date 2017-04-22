@@ -42,6 +42,6 @@
     </tbody>
 </table>
 
-<a class="btn btn-success button2" href="~/items/AllItems">Отиди на секцията за изделията</a>
-<a class="btn btn-warning button2" href="~/parts/allParts">Отиди на секцията за частите</a>
-<a class="btn btn-danger button2" href="~/home">Върни се на началната страница</a>
+@Html.ActionLink("Отиди на секцията за изделията", "AllItems", "Items", null, new { @class = "btn btn-success button2" })
+@Html.ActionLink("Отиди на секцията за частите", "AllParts", "Parts", null, new { @class = "btn btn-warning button2" })
+@Html.ActionLink("Върни се на началната страница", "Index", "Home", null, new { @class = "btn btn-danger button2" })

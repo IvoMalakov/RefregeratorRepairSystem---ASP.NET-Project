@@ -3,5 +3,4 @@
     ViewBag.Title = "Button_Central_Partial";
 }
 
-<a class="btn btn-danger button-central" href="home">Върни се на Home страницата</a>
-
+@Html.ActionLink("Върни се на главната администраторска страница", "Home", "Administrator", null, new { @class = "btn btn-danger button-central "})

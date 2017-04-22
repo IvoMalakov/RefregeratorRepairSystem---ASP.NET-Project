@@ -36,7 +36,7 @@
 
                 <td>
                     <input type="submit" class="btn btn-danger button2" value="Изтрий ремонта"/>
-                    <a class="btn btn-success button2" href="~/Repairs/AllRepairs">Върни се на страницата с ремонтите</a>
+                    @Html.ActionLink("Върни се на страницата с ремонтите", "AllRepairs", "Repairs", null , new { @class = "btn btn-success button2" })
                 </td>
             </tr>
         </table>

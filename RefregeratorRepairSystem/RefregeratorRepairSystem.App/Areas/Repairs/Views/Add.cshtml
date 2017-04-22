@@ -51,7 +51,7 @@
     @Html.ValidationMessageFor(r => r.Price, "Your price needs to be a positve number", new { @class = "red" })
 
     <div>
-        <a class="btn btn-danger button3" href="~/Repairs/AllRepairs">Върни се на страницата с ремонтите</a>
-        <input type="submit" class="btn btn-success button3" value="Добави нов ремонт" />
+        @Html.ActionLink("Върни се на страницата с ремонтите", "AllRepairs", "Repairs", null, new { @class = "btn btn-danger button3" })
+        <input type="submit" class="btn btn-success button3" value="Добави нов ремонт"/>
     </div>
 }

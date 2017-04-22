@@ -14,9 +14,9 @@
 
 <button class="btn btn-success button-central update-button" onclick="update()">Update Data</button>
 
-<a class="btn btn-primary button2" href="~/Repairs/AllRepairs">Отиди на секцията за ремонтите</a>
-<a class="btn btn-warning button2" href="~/Parts/AllParts">Отиди на секцията за частите</a>
-<a class="btn btn-danger button2" href="~/home">Върни се на началната страница</a>
+@Html.ActionLink("Отиди на секцията за ремонтите", "AllRepairs", "Repairs", null , new { @class = "btn btn-primary button2"})
+@Html.ActionLink("Отиди на секцията за частите", "AllParts", "Parts", null, new { @class = "btn btn-warning button2"})
+@Html.ActionLink("Върни се на началната страница", "Index", "Home", null , new { @class = "btn btn-danger button2"})
 
 <script>
     function update() {

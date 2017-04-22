@@ -40,8 +40,8 @@
                 </td>
 
                 <td>
-                    <input type="submit" class="btn btn-danger button2" value="Изтрий частта" />
-                    <a class="btn btn-success button2" href="~/Parts/AllParts">Върни се на страницата с частите</a>
+                    <input type="submit" class="btn btn-danger button2" value="Изтрий частта"/>
+                    @Html.ActionLink("Върни се на страницата с частите", "AllParts", "Parts", null, new { @class = "btn btn-success button2" })
                 </td>
             </tr>
         </table>

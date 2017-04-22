@@ -4,6 +4,27 @@
     ViewBag.Title = "Error";
 }
 
-<h1 class="text-danger">Error.</h1>
-<h2 class="text-danger">An error occurred while processing your request.</h2>
+<h1><span class="red">!!!Грешка!!! </span>По време на вашето запитване възникна грешка</h1>
+
+<h2>
+    Текущата грешка е възникнала при операция <span class="red">@Model.ActionName</span>
+    на раздела <span class="red">@Model.ControllerName</span>
+</h2>
+
+<p>За повече информация натиснете бутона по подробна информация по долу!</p>
+
+<div class="error-buttons">
+    <button class="btn btn-danger" onclick="details()">Детайли за възникналата грешка</button>
+    @Html.ActionLink("Върни се на началната страница", "Index", "Home", null, new {@class = "btn btn-success"})
+</div>
+
+<div id="details">
+    <p class="custom-navs">@Model.Exception.Message</p>
+</div>
+
+<script>
+    function details() {
+        $("#details").css("visibility", "visible");
+    }
+</script>
 

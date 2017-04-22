@@ -20,11 +20,11 @@ namespace RefregeratorRepairSystem.Data
 
         public DbSet<Repair> Repairs { get; set; }
 
+        public DbSet<Part> Parts { get; set; } 
+
         public static RefregeratorRepairSystemContext Create()
         {
             return new RefregeratorRepairSystemContext();
         }
-
-        public System.Data.Entity.DbSet<RefregeratorRepairSystem.Models.EntityModels.Part> Parts { get; set; }
     }
 }

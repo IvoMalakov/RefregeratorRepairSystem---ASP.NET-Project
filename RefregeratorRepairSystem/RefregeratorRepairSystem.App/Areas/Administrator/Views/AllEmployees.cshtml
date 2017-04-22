@@ -48,7 +48,7 @@
                     </td>
 
                     <td>
-                        <a class="btn btn-success" href="firedEmployee/@item.Id">Уволни работник</a>
+                        @Html.ActionLink("Уволни работник", "FiredEmployee", "Administrator", new { id = @item.Id}, new { @class = "btn btn-success "})
                     </td>
                 </tr>
             }

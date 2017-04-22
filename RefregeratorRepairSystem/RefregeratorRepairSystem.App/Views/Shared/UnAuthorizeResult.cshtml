@@ -7,6 +7,6 @@
 
 <p class="orangered">Съжалявам, но Вие нямате достъп до тази страница. Моля върнете се към началната страница</p>
 <div>
-    <a class="btn btn-danger button2" href="~/home">Върни се на началната страница</a>
+    @Html.ActionLink("Върни се на началната страница", "Index", "Home", null, new { @class = "btn btn-danger button2" })
 </div>
 

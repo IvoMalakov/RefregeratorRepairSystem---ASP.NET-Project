@@ -2,5 +2,7 @@
     ViewBag.Title = "Administrator_Partial_2";
 }
 
-<td><a class="btn btn-danger button1" href="~/administrator/home">Отиди на секцията за администратори</a></td>
+<td>
+    @Html.ActionLink("Отиди на секцията за администратори", "Home", "Administrator", null, new { @class = "btn btn-danger button1" })
+</td>
 

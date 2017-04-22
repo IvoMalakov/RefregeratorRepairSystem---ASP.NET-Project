@@ -61,7 +61,7 @@
     </select>
 
     <div>
-        <a class="btn btn-danger button3" href="~/Items/AllItems">Върни се на страницата с изделията</a>
-        <input type="submit" class="btn btn-success button3" value="Добави ново изделие" />
+        @Html.ActionLink("Върни се на страницата с изделията", "AllItems", "Items", null, new {@class = "btn btn-danger button3"})
+        <input type="submit" class="btn btn-success button3" value="Добави ново изделие"/>
     </div>
 }

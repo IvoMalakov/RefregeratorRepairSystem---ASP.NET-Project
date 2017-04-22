@@ -26,7 +26,7 @@
     @Html.ValidationMessageFor(model => model.Quantity, "Your quantity needs to be a positve number", new { @class = "red" })
 
     <div>
-        <input type="submit" class="btn btn-danger button3" value="Редактирай тази част" />
-        <a class="btn btn-success button3" href="~/Parts/AllParts">Върни се на страницата с частите</a>
+        <input type="submit" class="btn btn-danger button3" value="Редактирай тази част"/>
+        @Html.ActionLink("Върни се на страницата с частите", "AllParts", "Parts", null, new { @class = "btn btn-success button3" })
     </div>
 }

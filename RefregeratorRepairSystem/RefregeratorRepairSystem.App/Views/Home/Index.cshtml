@@ -3,13 +3,13 @@
 }
 
 <div class="jumbotron">
-    <h1 style="color: red; margin-bottom: 20px">Добре дошли в сервиза за климатична и хладилна техника "ЕТ Христо Малаков"</h1>
+    <h1 class="red mainHeader">Добре дошли в сервиза за климатична и хладилна техника "ЕТ Христо Малаков"</h1>
 </div>
 
 <div class="row">
     <div class="col-md-6">
         <table class="table table-striped">
-            <tr>
+            <tr class="custom-navs">
                 <th>Ремонти</th>
                 <th>Изделия</th>
                 <th>Части</th>
@@ -21,9 +21,18 @@
                 }
             </tr>
             <tr>
-                <td><a class="btn btn-primary button1" href="~/repairs/allRepairs">Отиди на секцията за ремонти</a></td>
-                <td><a class="btn btn-success button1" href="~/items/allItems">Отиди на секцията за изделията</a></td>
-                <td><a class="btn btn-warning button1" href="~/parts/allParts">Отиди на секцията за части</a></td>
+                <td>
+                    @Html.ActionLink("Отиди на секцията за ремонти", "AllRepairs", "Repairs", null, new { @class = "btn btn-primary button1" })
+                </td>
+
+                <td>
+                    @Html.ActionLink("Отиди на секцията за изделия", "AllItems", "Items", null, new { @class = "btn btn-success button1" })
+                </td>
+
+                <td>
+                    @Html.ActionLink("Отиди на секцията за части", "AllParts", "Parts", null, new {@class = "btn btn-warning button1"})
+                </td>
+
                 @{
                     if (Request.IsAuthenticated && User.IsInRole("Administrator"))
                     {

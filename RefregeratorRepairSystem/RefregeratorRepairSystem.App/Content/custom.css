@@ -17,6 +17,10 @@ label {
     margin-right: 8px;
 }
 
+#details {
+    visibility: hidden;
+}
+
 .button {
     margin: 10px auto 10px 300px;
 }
@@ -69,6 +73,15 @@ label {
     margin-bottom: 10px;
 }
 
+.error-buttons {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.error-buttons button {
+    margin-right: 30px;
+}
+
 .red {
     color: red;
 }
@@ -79,4 +92,8 @@ label {
 
 .cyan {
     color: cyan;
+}
+
+.mainHeader {
+    margin-bottom: 20px;
 }

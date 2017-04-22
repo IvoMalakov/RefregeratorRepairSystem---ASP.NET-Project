@@ -59,8 +59,8 @@
             </td>
 
             <td>
-                <a class="btn btn-danger button2" href="~/administrator/home">Cancel</a>
-                <input type="submit" class="btn btn-success button2" value="Fired an Employee" />
+                @Html.ActionLink("Cancel", "Home", "Administrator", null, new { @class = "btn btn-danger button2" })
+                <input type="submit" class="btn btn-success button2" value="Fired an Employee"/>
             </td>
         </tr>
     </table>

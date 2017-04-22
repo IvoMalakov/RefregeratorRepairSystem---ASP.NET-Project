@@ -41,7 +41,7 @@
                     </td>
 
                     <td>
-                        <a class="btn btn-success" href="createEmployee/@item.Id">Create an employee</a>
+                        @Html.ActionLink("Create an employee", "CreateEmployee", "Administrator", new { id = @item.Id }, new { @class = "btn btn-success" })
                     </td>
                 </tr>
             }
