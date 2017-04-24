@@ -8,62 +8,70 @@
 <h1>Create an employee</h1>
 @using (Html.BeginForm())
 {
-    <div><table class="table table-striped special-table">
-        <tr class="custom-navs">
-            <th>
-                @Html.DisplayNameFor(m => m.FirstName)
-            </th>
+    @Html.AntiForgeryToken()
+    <div>
+        @Html.ValidationSummary(false, "", new {@class = "red"})
 
-            <th>
-                @Html.DisplayNameFor(m => m.LastName)
-            </th>
+        <table class="table table-striped special-table">
+            <tr class="custom-navs">
+                <th>
+                    @Html.DisplayNameFor(m => m.FirstName)
+                </th>
 
-            <th>
-                @Html.DisplayNameFor(m => m.Address)
-            </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.LastName)
+                </th>
 
-            <th>
-                @Html.DisplayNameFor(m => m.ApplicationUser.PhoneNumber)
-            </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.Address)
+                </th>
 
-            <th>
-                @Html.DisplayNameFor(m => m.Salary)
-            </th>
-            <th></th>
+                <th>
+                    @Html.DisplayNameFor(m => m.ApplicationUser.PhoneNumber)
+                </th>
 
-            <th>
-                Сигурен ли сте, че искате да назначите този клиент за работник във фирмата?
-            </th>
-        </tr>
+                <th>
+                    @Html.DisplayNameFor(m => m.Salary)
+                </th>
+                <th></th>
 
-        <tr>
-            <td>
-                @Html.EditorFor(model => model.FirstName, new {htmlAttribute = new {@class = "form-control", disable = "disable", @readonly = "readonly"}})
-            </td>
+                <th>
+                    Сигурен ли сте, че искате да назначите този клиент за работник във фирмата?
+                </th>
+            </tr>
 
-            <td>
-                @Html.EditorFor(model => model.LastName, new {htmlAttribute = new {@class = "form-control", disable = "disable", @readonly = "readonly"}})
-            </td>
-
-            <td>
-                @Html.EditorFor(model => model.Address, new {htmlAttribute = new {@class = "form-control", disable = "disable", @readonly = "readonly"}})
-            </td>
-
-            <td>
-                @Html.EditorFor(model => model.ApplicationUser.PhoneNumber, new {htmlAttribute = new {@class = "form-control", disable = "disable", @readonly = "readonly"}})
-            </td>
-
-            <td>
-                @Html.EditorFor(m => m.Salary, new {htmlAttribute = new {@class = "form-control"}})
-            </td>
-            <td>
-                <input type="hidden" name="ApplicationUser" value="@Model.ApplicationUser" disabled="disabled"/>
+            <tr>
+                <td>
+                    @Html.EditorFor(model => model.FirstName, new {htmlAttribute = new {@class = "form-control", disable = "disable", @readonly = "readonly"}})
                 </td>
-            <td>
-                @Html.ActionLink("Cancel", "Home", "Administrator", null, new { @class = "btn btn-danger button2" })
-                <input type="submit" class="btn btn-success button2" value="Create an Employee"/>
-            </td>
+
+                <td>
+                    @Html.EditorFor(model => model.LastName, new {htmlAttribute = new {@class = "form-control", disable = "disable", @readonly = "readonly"}})
+                </td>
+
+                <td>
+                    @Html.EditorFor(model => model.Address, new {htmlAttribute = new {@class = "form-control", disable = "disable", @readonly = "readonly"}})
+                </td>
+
+                <td>
+                    @Html.EditorFor(model => model.ApplicationUser.PhoneNumber, new {htmlAttribute = new {@class = "form-control", disable = "disable", @readonly = "readonly"}})
+                </td>
+
+                <td>
+                    @Html.EditorFor(m => m.Salary, new {htmlAttribute = new {@class = "form-control"}})
+                </td>
+                <td>
+                    <input type="hidden" name="ApplicationUser" value="@Model.ApplicationUser" disabled="disabled"/>
+                </td>
+                <td>
+                    @Html.ActionLink("Cancel", "Home", "Administrator", null, new {@class = "btn btn-danger button2"})
+                    <input type="submit" class="btn btn-success button2" value="Create an Employee"/>
+                </td>
             </tr>
         </table>
     </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
 }

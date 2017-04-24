@@ -10,38 +10,38 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
-   
-
-    @Html.LabelFor(p => p.Name)
-    @Html.EditorFor(p => p.Name, new { htmlAttribute = new { @class = "form-control", @name = "Name" } })
-    @Html.ValidationMessageFor(r => r.Name, "Your name must be at least 3 symbols long", new { @class = "red" })
-
-    @Html.LabelFor(p => p.Model)
-    @Html.EditorFor(p => p.Model, new { htmlAttribute = new { @class = "form-control", @name = "Model" } })
-    @Html.ValidationMessageFor(r => r.Name, "Your name must be at least 3 symbols long", new { @class = "red" })
-
-    @Html.LabelFor(p => p.Price)
-    @Html.EditorFor(p => p.Price, new { htmlAttribute = new { @class = "form-control", @name = "Price" } })
-    @Html.ValidationMessageFor(r => r.Price, "Your price needs to be a positve number", new { @class = "red" })
-
-    @Html.LabelFor(p => p.Quantity)
-    @Html.EditorFor(p => p.Quantity, new { htmlAttribute = new { @class = "form-control", @name = "Price" } })
-    @Html.ValidationMessageFor(r => r.Price, "Your quantity needs to be a positve number", new { @class = "red" })
-
-    <label for="Item" class="col-form-label">Item: </label>
-    <select class="form-control" name="ItemId" id="Item">
-        @{
-            foreach (var item in Model.Items)
-            {
-                <option value="@item.Id">@item.ItemDescription</option>
-            }
-        }
-    </select>
+    @Html.ValidationSummary(false, "", new { @class = "red" })
 
     <div>
-        @Html.ActionLink("Върни се на страницата с частите", "AllParts", "Parts", null, new { @class = "btn btn-danger button3" })
-        <input type="submit" class="btn btn-success button3" value="Добави нова част"/>
+        @Html.LabelFor(p => p.Name)
+        @Html.EditorFor(p => p.Name, new {htmlAttribute = new {@class = "form-control", @name = "Name"}})
+
+        @Html.LabelFor(p => p.Model)
+        @Html.EditorFor(p => p.Model, new {htmlAttribute = new {@class = "form-control", @name = "Model"}})
+
+        @Html.LabelFor(p => p.Price)
+        @Html.EditorFor(p => p.Price, new {htmlAttribute = new {@class = "form-control", @name = "Price"}})
+
+        @Html.LabelFor(p => p.Quantity)
+        @Html.EditorFor(p => p.Quantity, new {htmlAttribute = new {@class = "form-control", @name = "Price"}})
+
+        <label for="Item" class="col-form-label">Item: </label>
+        <select class="form-control" name="ItemId" id="Item">
+            @{
+                foreach (var item in Model.Items)
+                {
+                    <option value="@item.Id">@item.ItemDescription</option>
+                }
+            }
+        </select>
+
+        <div>
+            @Html.ActionLink("Върни се на страницата с частите", "AllParts", "Parts", null, new {@class = "btn btn-danger button3"})
+            <input type="submit" class="btn btn-success button3" value="Добави нова част"/>
+        </div>
     </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
 }

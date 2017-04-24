@@ -10,23 +10,28 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
-    @Html.HiddenFor(model => model.Id, new { htmlAttribute = new { @name = "Id" } })
-
-    @Html.LabelFor(model => model.PartDescription)
-    @Html.EditorFor(model => model.PartDescription, new { htmlAttribute = new { @class = "form-control", @disable = "disable", @readonly = "readonly", @name = "PartDescription" } })
-
-    @Html.LabelFor(model => model.Price)
-    @Html.EditorFor(model => model.Price, new { htmlAttribute = new { @class = "form-control", @name = "Price" } })
-    @Html.ValidationMessageFor(model => model.Price, "Your price needs to be a positve number", new { @class = "red" })
-
-    @Html.LabelFor(model => model.Quantity)
-    @Html.EditorFor(model => model.Quantity, new { htmlAttribute = new { @class = "form-control", @name = "Quantity" } })
-    @Html.ValidationMessageFor(model => model.Quantity, "Your quantity needs to be a positve number", new { @class = "red" })
 
     <div>
-        <input type="submit" class="btn btn-danger button3" value="Редактирай тази част"/>
-        @Html.ActionLink("Върни се на страницата с частите", "AllParts", "Parts", null, new { @class = "btn btn-success button3" })
+        @Html.ValidationSummary(false, "", new { @class = "red" })
+
+        @Html.HiddenFor(model => model.Id, new {htmlAttribute = new {@name = "Id"}})
+
+        @Html.LabelFor(model => model.PartDescription)
+        @Html.EditorFor(model => model.PartDescription, new {htmlAttribute = new {@class = "form-control", @disable = "disable", @readonly = "readonly", @name = "PartDescription"}})
+
+        @Html.LabelFor(model => model.Price)
+        @Html.EditorFor(model => model.Price, new {htmlAttribute = new {@class = "form-control", @name = "Price"}})
+
+        @Html.LabelFor(model => model.Quantity)
+        @Html.EditorFor(model => model.Quantity, new {htmlAttribute = new {@class = "form-control", @name = "Quantity"}})
+
+        <div>
+            <input type="submit" class="btn btn-danger button3" value="Редактирай тази част"/>
+            @Html.ActionLink("Върни се на страницата с частите", "AllParts", "Parts", null, new {@class = "btn btn-success button3"})
+        </div>
     </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
 }
