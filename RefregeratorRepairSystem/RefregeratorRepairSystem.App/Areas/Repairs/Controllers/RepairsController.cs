@@ -13,6 +13,7 @@ using RefregeratorRepairSystem.Models.EntityModels;
 using RefregeratorRepairSystem.Models.ViewModels.Repairs;
 using RefregeratorRepairSystem.Models.ViewModels.Repairs.AddRepairsViewModels;
 using RefregeratorRepairSystem.Services;
+using RefregeratorRepairSystem.Services.Interfaces;
 
 namespace RefregeratorRepairSystem.App.Areas.Repairs.Controllers
 {
@@ -21,7 +22,12 @@ namespace RefregeratorRepairSystem.App.Areas.Repairs.Controllers
     public class RepairsController : Controller
     {
         private RefregeratorRepairSystemContext db = new RefregeratorRepairSystemContext();
-        private RepairsService service = new RepairsService();
+        private IRepairsService service;
+
+        public RepairsController(IRepairsService service)
+        {
+            this.service = service;
+        }
 
         [Route("allRepairs")]
         public ActionResult AllRepairs()

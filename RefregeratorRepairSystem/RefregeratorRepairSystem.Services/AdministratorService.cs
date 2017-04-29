@@ -5,14 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNet.Identity.EntityFramework;
+using RefregeratorRepairSystem.Data;
 using RefregeratorRepairSystem.Models.BindingModels;
 using RefregeratorRepairSystem.Models.EntityModels;
 using RefregeratorRepairSystem.Models.ViewModels.Customers;
 using RefregeratorRepairSystem.Models.ViewModels.Employees;
+using RefregeratorRepairSystem.Services.Interfaces;
 
 namespace RefregeratorRepairSystem.Services
 {
-    public class AdministratorService : Service
+    public class AdministratorService : Service, IAdministratorService
     {
         public IEnumerable<ListCustomerViewModel> GetAllCustomers()
         {

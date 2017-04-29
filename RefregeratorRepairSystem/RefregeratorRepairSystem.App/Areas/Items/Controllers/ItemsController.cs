@@ -12,6 +12,7 @@ using RefregeratorRepairSystem.Models.BindingModels;
 using RefregeratorRepairSystem.Models.EntityModels;
 using RefregeratorRepairSystem.Models.ViewModels.Items;
 using RefregeratorRepairSystem.Services;
+using RefregeratorRepairSystem.Services.Interfaces;
 
 namespace RefregeratorRepairSystem.App.Areas.Items.Controllers
 {
@@ -20,7 +21,12 @@ namespace RefregeratorRepairSystem.App.Areas.Items.Controllers
     public class ItemsController : Controller
     {
         private RefregeratorRepairSystemContext db = new RefregeratorRepairSystemContext();
-        private ItemsService service = new ItemsService();
+        private IItemsService service;
+
+        public ItemsController(IItemsService service)
+        {
+            this.service = service;
+        }
 
         [Route("AllItems")]
         public ActionResult AllItems()

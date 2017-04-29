@@ -12,6 +12,7 @@ using RefregeratorRepairSystem.Data;
 using RefregeratorRepairSystem.Models.EntityModels;
 using RefregeratorRepairSystem.Models.ViewModels.Account;
 using RefregeratorRepairSystem.Services;
+using RefregeratorRepairSystem.Services.Interfaces;
 
 namespace RefregeratorRepairSystem.App.Controllers
 {
@@ -20,13 +21,15 @@ namespace RefregeratorRepairSystem.App.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
-        private AccountService service;
+        private IAccountService service;
 
-        public AccountController()
+        public AccountController(IAccountService service)
         {
-            this.service = new AccountService();
+            this.service = service;
         }
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager) : this()
+
+        public AccountController(IAccountService service, ApplicationUserManager userManager, ApplicationSignInManager signInManager) 
+            : this(service)
         {
             UserManager = userManager;
             SignInManager = signInManager;

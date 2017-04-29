@@ -5,14 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using RefregeratorRepairSystem.Data;
 using RefregeratorRepairSystem.Models.BindingModels;
 using RefregeratorRepairSystem.Models.EntityModels;
 using RefregeratorRepairSystem.Models.ViewModels.Repairs;
 using RefregeratorRepairSystem.Models.ViewModels.Repairs.AddRepairsViewModels;
+using RefregeratorRepairSystem.Services.Interfaces;
 
 namespace RefregeratorRepairSystem.Services
 {
-    public class RepairsService : Service
+    public class RepairsService : Service, IRepairsService
     {
         public IEnumerable<ListRepairsViewModel> GetAllRepairs()
         {

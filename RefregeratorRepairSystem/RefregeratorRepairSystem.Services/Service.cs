@@ -1,8 +1,9 @@
 ﻿namespace RefregeratorRepairSystem.Services
 {
     using RefregeratorRepairSystem.Data;
+    using RefregeratorRepairSystem.Services.Interfaces;
 
-    public abstract class Service
+    public abstract class Service : IService
     {
         protected Service()
         {

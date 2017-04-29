@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
+using RefregeratorRepairSystem.Data;
 using RefregeratorRepairSystem.Models.BindingModels;
 using RefregeratorRepairSystem.Models.EntityModels;
 using RefregeratorRepairSystem.Models.Enums;
 using RefregeratorRepairSystem.Models.ViewModels.Items;
 using RefregeratorRepairSystem.Models.ViewModels.Parts;
+using RefregeratorRepairSystem.Services.Interfaces;
 
 namespace RefregeratorRepairSystem.Services
 {
-    public class ItemsService : Service
+    public class ItemsService : Service, IItemsService
     {
         public AddItemViewModel GetItemDetailsForAdd()
         {

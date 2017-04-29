@@ -4,8 +4,9 @@
     using RefregeratorRepairSystem.Data;
     using RefregeratorRepairSystem.Models.ViewModels.Account;
     using RefregeratorRepairSystem.Models.EntityModels;
+    using RefregeratorRepairSystem.Services.Interfaces;
     using AutoMapper;
-    public class AccountService : Service
+    public class AccountService : Service, IAccountService
     {
         public void CreateCustomer(ApplicationUser user, RegisterViewModel model)
         {

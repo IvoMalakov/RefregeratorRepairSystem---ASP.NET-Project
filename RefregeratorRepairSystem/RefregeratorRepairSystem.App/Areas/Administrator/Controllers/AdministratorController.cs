@@ -12,6 +12,7 @@ using RefregeratorRepairSystem.Models.EntityModels;
 using RefregeratorRepairSystem.Models.ViewModels.Customers;
 using RefregeratorRepairSystem.Models.ViewModels.Employees;
 using RefregeratorRepairSystem.Services;
+using RefregeratorRepairSystem.Services.Interfaces;
 
 namespace RefregeratorRepairSystem.App.Areas.Administrator.Controllers
 {
@@ -19,15 +20,15 @@ namespace RefregeratorRepairSystem.App.Areas.Administrator.Controllers
     [RoutePrefix("Administrator")]
     public class AdministratorController : Controller
     {
-        private AdministratorService service;
+        private IAdministratorService service;
         private ApplicationUserManager _userManager;
 
-        public AdministratorController()
+        public AdministratorController(IAdministratorService service)
         {
-            this.service = new AdministratorService();
+            this.service = service;
         }
 
-        public AdministratorController(ApplicationUserManager usermanager) : this()
+        public AdministratorController(IAdministratorService service, ApplicationUserManager usermanager) : this(service)
         {
             this.UserManager = usermanager;
         }

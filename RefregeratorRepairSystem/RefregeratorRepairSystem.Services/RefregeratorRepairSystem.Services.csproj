@@ -63,6 +63,12 @@
   <ItemGroup>
     <Compile Include="AccountService.cs" />
     <Compile Include="AdministratorService.cs" />
+    <Compile Include="Interfaces\IAccountService.cs" />
+    <Compile Include="Interfaces\IAdministratorService.cs" />
+    <Compile Include="Interfaces\IItemsService.cs" />
+    <Compile Include="Interfaces\IPartsService.cs" />
+    <Compile Include="Interfaces\IRepairsService.cs" />
+    <Compile Include="Interfaces\IService.cs" />
     <Compile Include="ItemsService.cs" />
     <Compile Include="PartsService.cs" />
     <Compile Include="RepairsService.cs" />
