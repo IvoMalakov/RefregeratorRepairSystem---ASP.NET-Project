@@ -60,7 +60,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data.cs" />
+    <Compile Include="Interfaces\IRefregeratorRepairSystemContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Mocks\FakeCustomersDbSet.cs" />
+    <Compile Include="Mocks\FakeDbSet.cs" />
+    <Compile Include="Mocks\FakeEmployeesDbSet.cs" />
+    <Compile Include="Mocks\FakeItemsDbSet.cs" />
+    <Compile Include="Mocks\FakePartsDbSet.cs" />
+    <Compile Include="Mocks\FakeRefregeratorRepairSystemContext.cs" />
+    <Compile Include="Mocks\FakeRepairsDbSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RefregeratorRepairSystemContext.cs" />
   </ItemGroup>

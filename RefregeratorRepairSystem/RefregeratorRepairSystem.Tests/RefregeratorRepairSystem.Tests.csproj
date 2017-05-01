@@ -33,6 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -82,6 +90,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\PartsControllerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
   </ItemGroup>
@@ -95,6 +104,18 @@
     <ProjectReference Include="..\RefregeratorRepairSystem.App\RefregeratorRepairSystem.App.csproj">
       <Project>{2B4011C9-E76A-42FA-910E-DAC2BA846FFD}</Project>
       <Name>RefregeratorRepairSystem.App</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RefregeratorRepairSystem.Data\RefregeratorRepairSystem.Data.csproj">
+      <Project>{e9736f42-99ec-4a6f-b1fa-2508ffee2a9a}</Project>
+      <Name>RefregeratorRepairSystem.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RefregeratorRepairSystem.Models\RefregeratorRepairSystem.Models.csproj">
+      <Project>{bc8f7abf-0ff0-4bfd-984a-32f3b869bc22}</Project>
+      <Name>RefregeratorRepairSystem.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RefregeratorRepairSystem.Services\RefregeratorRepairSystem.Services.csproj">
+      <Project>{9f825652-bdb0-405d-b650-1c8046052d8f}</Project>
+      <Name>RefregeratorRepairSystem.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

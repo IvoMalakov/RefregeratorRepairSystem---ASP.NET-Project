@@ -49,6 +49,13 @@ D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\De
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\RefregeratorRepairSystem.Services.dll
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\AutoMapper.xml
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\RefregeratorRepairSystem.Services.pdb
+D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\WebActivatorEx.dll
+D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\Ninject.Web.Common.dll
+D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\Ninject.dll
+D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\Ninject.Web.Common.xml
+D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\Ninject.xml
+D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\EntityFramework.SqlServer.dll
+D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\EntityFramework.SqlServer.xml
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\roslyn\csc.exe
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\roslyn\csc.exe.config
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\roslyn\csc.rsp

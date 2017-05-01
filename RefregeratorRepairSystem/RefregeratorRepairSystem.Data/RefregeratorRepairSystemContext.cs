@@ -3,8 +3,9 @@ namespace RefregeratorRepairSystem.Data
     using System.Data.Entity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using RefregeratorRepairSystem.Models.EntityModels;
+    using RefregeratorRepairSystem.Data.Interfaces;
 
-    public class RefregeratorRepairSystemContext : IdentityDbContext<ApplicationUser>
+    public class RefregeratorRepairSystemContext : IdentityDbContext<ApplicationUser>, IRefregeratorRepairSystemContext
     {
      
         public RefregeratorRepairSystemContext()
