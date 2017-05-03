@@ -56,6 +56,10 @@ D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\De
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\Ninject.xml
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\EntityFramework.SqlServer.dll
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\EntityFramework.SqlServer.xml
+D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\Castle.Core.dll
+D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\Moq.dll
+D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\Castle.Core.xml
+D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\Moq.xml
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\roslyn\csc.exe
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\roslyn\csc.exe.config
 D:\ASP.NET\Proekt\RefregeratorRepairSystem\RefregeratorRepairSystem.Tests\bin\Debug\roslyn\csc.rsp

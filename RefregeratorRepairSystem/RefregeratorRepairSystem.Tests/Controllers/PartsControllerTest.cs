@@ -1,7 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Net;
 using System.Web.Mvc;
 using System.Web.UI.WebControls.WebParts;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using AutoMapper;
+using Moq;
 using RefregeratorRepairSystem.App.Areas.Parts.Controllers;
 using RefregeratorRepairSystem.Data.Interfaces;
 using RefregeratorRepairSystem.Data.Mocks;
@@ -16,7 +19,7 @@ namespace RefregeratorRepairSystem.Tests.Controllers
     [TestClass]
     public class PartsControllerTest
     {
-        private List<Models.EntityModels.Part> _parts;
+        private List<Part> _parts;
         private PartsController _controller;
         private IPartsService _service;
         private IRefregeratorRepairSystemContext _context;
@@ -24,6 +27,7 @@ namespace RefregeratorRepairSystem.Tests.Controllers
         [TestInitialize]
         public void Init()
         {
+            this.ConfigureMapper();
             this._service = new PartsService();
             this._controller = new PartsController(this._service);
             this._parts = new List<Part>()
@@ -62,8 +66,17 @@ namespace RefregeratorRepairSystem.Tests.Controllers
         [TestMethod]
         public void ListAllParts_ShouldReturnsOk()
         {
-            var data = this._controller.AllParts() as ViewResult;
-            Assert.IsNotNull(data);
+            var result = this._controller.AllParts() as HttpStatusCodeResult;
+
+            Assert.AreEqual(result.StatusCode, HttpStatusCode.OK);
+        }
+
+        private void ConfigureMapper()
+        {
+            Mapper.Initialize(expression =>
+            {
+                expression.CreateMap<Part, ListPartsViewModel>();
+            });
         }
     }
 }

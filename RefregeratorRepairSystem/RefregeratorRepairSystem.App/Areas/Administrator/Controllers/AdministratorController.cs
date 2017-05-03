@@ -87,9 +87,9 @@ namespace RefregeratorRepairSystem.App.Areas.Administrator.Controllers
             if (this.ModelState.IsValid)
             {
                 this.service.TransformCustomerToEmployee(model);
-                //ApplicationUser user = UserManager.FindByName(this.User.Identity.Name);
-                //UserManager.AddToRole(user.Id, "Employee");
-                //UserManager.RemoveFromRole(user.Id, "Customer");
+                var userId = model.ApplicationUser.Id;
+                UserManager.AddToRole(userId, "Employee");
+                UserManager.RemoveFromRole(userId, "Customer");
                 return this.RedirectToAction("Index");
             }
 
@@ -104,9 +104,9 @@ namespace RefregeratorRepairSystem.App.Areas.Administrator.Controllers
             if (this.ModelState.IsValid)
             {
                 this.service.FiredAnEmployee(model);
-                //ApplicationUser user = UserManager.FindByName(this.User.Identity.Name);
-                //UserManager.RemoveFromRole(user.Id, "Employee");
-                //this.service.DeleteUser(user.Id);
+                var userId = model.ApplicationUser.Id;
+                UserManager.RemoveFromRole(userId, "Employee");
+                this.service.DeleteUser(userId);
                 return this.RedirectToAction("AllEmployees");
             }
 
